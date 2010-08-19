@@ -19,7 +19,7 @@
 		<div class="w2">
 			<div id="header">
 				<div class="holder">
-					<strong class="logo"><a href="$BaseUrl">Site Sprocket Slow, friendly websites.</a></strong>
+					<strong class="logo"><a href="$BaseUrl">Site Sprocket Fast, friendly websites.</a></strong>
 					<% include Menu %>
 				</div>
 			</div>
