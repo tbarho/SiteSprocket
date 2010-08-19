@@ -1,0 +1,142 @@
+/* Create Account */
+
+
+.create-account {
+	float: left;
+	width: 502px;
+}
+
+.head {
+	overflow: auto;
+}
+
+#main h2 {
+	margin: 0;
+	padding: 0;
+	color: #003865;
+}
+
+.create-account h2 {
+	float: left;
+}
+
+#dialog {
+	display: none;
+}
+
+#modal {
+	font-size: 12px;
+	margin: 11px 0 0 13px;
+	float: left;
+}
+
+.form-content {
+
+}
+
+.form-content form {
+	margin: 20px 0;
+	padding: 15px;
+
+}
+
+/*
+.field {
+	clear: both;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+label {
+	float: left;
+}
+
+.middleColumn {
+	float: right;
+}
+
+.countrydropdown label {
+	float: none;
+}
+
+.countrydropdown .middleColumn {
+	float: none;
+	padding: 5px 0;
+}
+
+.countrydropdown .middleColumn select {
+	width: 100%;
+}
+
+.create-account .Actions {
+	padding: 15px 0;
+}
+
+.create-account .Actions input {
+	float: right;
+	margin-top: 6px;
+}
+*/
+
+/* SideBar */
+
+.sidebar {
+	float: right;
+	width: 400px;
+}
+
+.cart {
+
+}
+
+.cart table {
+	width: 100%;
+	background: #f1e2c3;
+	border: solid #d9bd7f;
+	border-width: 1px 0 0 1px;
+	font-size: 14px;
+	color: #5d491b;
+	margin-top: 10px;
+}
+
+.cart table th, .cart table td {
+	padding: 6px;
+	border: solid #d9bd7f;
+	border-width: 0 1px 1px 0;
+}
+
+.cart table th {
+	text-align: left;
+	border-bottom-width: 4px;
+	font-size: 12px;
+}
+
+.cart table td.price {
+	color: #2377b9;
+}
+
+
+.cart table .summary td {
+	border-top-width: 3px;
+}
+
+.sidebar h4 {
+	margin: 15px 0;
+	color: #003865;
+}
+
+.sidebar ul {
+	padding-left: 20px;
+	list-style: none;
+}
+
+.sidebar li {
+	list-style-image: none;
+	background: url('../images/accept.png') no-repeat 0 0;
+	margin: 0 0 7px -10px;
+	padding: 0 0 1px 22px;
+	font-size: 12px;
+}
+
+
+

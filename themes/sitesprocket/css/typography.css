@@ -1,0 +1,168 @@
+/* GENERIC STYLES 
+-------------------------------------------- */
+ 
+.typography * {
+	 
+}
+
+/* PARAGRAPHS 
+-------------------------------------------- */
+.typography p { 
+}
+
+/* QUOTES
+-------------------------------------------- */
+.typography blockquote {
+	margin: 10px;
+	font-size: 1.4em;
+	font-style: italic;
+}	
+.typography q {
+	display:block;
+	font-size: 0.8em;
+	margin: 1em 1em;
+	padding: 0.5em;
+}
+
+/* LINKS 
+-------------------------------------------- */
+
+.typography a { 
+}
+	.typography a:hover { 
+	}
+
+	/* LINK ICONS - shows type of file
+	------------------------------------ */
+	.typography a[href$=".pdf"],
+	.typography a[href$=".PDF"],
+	.typography a.pdf {
+		padding: 2px;
+		padding-left: 20px;
+		background: url(../images/icons/page_white_acrobat.png) no-repeat left center;
+	}
+	.typography a[href$=".doc"],
+	.typography a[href$=".DOC"],
+	.typography a.doc {
+		padding: 2px;
+		padding-left: 20px;
+		background: url(../images/icons/page_word.png) no-repeat left center;
+	}
+	.typography a[href$=".xls"],
+	.typography a[href$=".XLS"],
+	.typography a.xls {
+		padding: 2px;
+		padding-left: 20px;
+		background: url(../images/icons/page_excel.png) no-repeat left center;
+	}
+	.typography a[href$=".gz"],
+	.typography a[href$=".GZ"],
+	.typography a[href$=".gzip"],
+	.typography a[href$=".GZIP"],
+	.typography a[href$=".zip"],
+	.typography a[href$=".ZIP"],
+	.typography a.archive {
+		padding: 2px;
+		padding-left: 20px;
+		background: url(../images/icons/page_white_zip.png) no-repeat left center;
+	}
+	.typography a[href$=".exe"],
+	.typography a[href$=".EXE"],
+	.typography a.application {
+		padding: 2px;
+		padding-left: 20px;
+		background: url(../images/icons/application.png) no-repeat left center;
+	}
+
+/* LIST STYLES 
+-------------------------------------------- */
+.typography ul, 
+.typography ol {
+}
+	.typography li {
+	}
+		.typography li li {
+		}
+		
+/* HEADER STYLES 
+-------------------------------------------- */
+
+.typography h1,
+.typography h2 { 
+}
+
+.typography h1 {
+	font-size: 24px;
+}
+.typography h2 { 
+ 	font-size: 20px; 
+}	
+.typography h3 {
+	font-size: 18px;
+}
+.typography h4 {
+	font-size: 16px;
+}
+.typography h5 {
+	font-size: 14px;
+}
+.typography h6 {
+	font-size: 13px;
+}
+
+/* PRE STYLES 
+-------------------------------------------- */	
+.typography pre {
+	font-family:"Courier New",Courier;
+	display:block;
+	font-size:1.2em;
+	margin:2em 5em;
+	padding:0.5em;
+}
+
+/* TABLE STYLING 
+-------------------------------------------- */
+.typography table {
+	margin: 0 0 18px 0;
+	font-size: 11px;
+	border-collapse:collapse;
+}
+	.typography tr {}
+	
+		.typography td {
+		}
+
+/* WYSIWYG EDITOR ALIGNMENT CLASSES 
+-------------------------------------------- */
+.typography .left {
+	
+}
+.typography .center {
+	
+}
+.typography .right {
+	
+}
+
+/* IMAGES 
+-------------------------------------------- */
+.typography img {
+	border: none;
+}
+	.typography img.right {
+		float: right;
+		margin-left: 20px;
+	}
+	.typography img.left {
+		float: left;
+	}
+	.typography img.leftAlone {
+		float: left;
+		margin-right: 100%;
+	}
+	.typography img.center {
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}

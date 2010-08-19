@@ -1,0 +1,269 @@
+a, input {
+	outline: none;
+}
+
+
+
+.content-list li.wide {
+	width: 581px;
+}
+
+
+
+/* DESCRIPTION STYLING */
+/* ******************* */
+#gallery {
+	margin-bottom: 20px;
+}
+
+#gallery h1 {
+	font-size: 22px;
+}
+
+#gallery h1.desc{
+	color:#fff;
+	margin:-2px 0 0 -3px;
+	font-size:36px;
+}
+#gallery h2.desc {
+	color: #2369A1;
+}
+#sub-nav {
+	float: right;
+	margin: -28px 15px 5px 0;
+	font-size: 13px;
+}
+#sub-nav li {
+	float: left;
+	list-style: none;
+	margin-left: 40px;
+}
+#sub-nav li a {
+	color: #00527F;
+	text-decoration: none;
+}
+#sub-nav li a:hover, #sub-nav li a.active {
+	color: #fff;
+}
+
+#sub-nav li.order {
+	width: 98px;
+}
+
+#sub-nav li.order a {
+	display: block;
+	background: url('../images/buy-now-green.png') no-repeat 0 0;
+	padding-bottom: 9px;
+	text-indent: -9999px;
+	margin-top: -4px;
+}
+
+.breadcrumbs {
+	font-size: 11px;
+	margin-bottom: 15px;
+}
+.breadcrumbs a {
+	text-decoration: none;
+}
+.breadcrumbs a:hover {
+	text-decoration: underline;
+}
+.breadcrumbs span {
+	font-style: italic;
+	margin-right: 10px;
+}
+
+
+/* CONTENT LIST STYLING */
+/* ******************** */
+.content-list h3 a {
+	color: #FF8400;
+	text-decoration: none;
+}
+.content-list h3 a:hover {
+	color: #2369A1;
+}
+
+
+/* FORMS STYLING */
+/* ****************** */
+
+
+/*
+.email-form{margin:0 0 0 -2px;}
+.field, .Actions{
+	overflow:hidden;
+	width:352px;
+	padding-bottom:21px;
+}
+.middleColumn{
+	float:right;
+	padding-right:2px;
+}
+.field label.left{
+	float:left;
+	padding:7px 0 0;
+	width:70px;
+	font-weight:bold;
+	font-size:18px;
+	color:#646464;
+}
+.field input.text{
+	margin:0;
+	padding:6px 5px 8px;
+	color:#000;
+	font-weight:bold;
+	font-size:18px;
+	border:1px solid #a6a6a6;
+	background:#fff;
+	display:block;
+	width:266px;
+	float:left;
+}
+.textarea textarea{
+	margin:0;
+	padding:0 0 0 5px;
+	width:271px;
+	height:94px;
+	overflow:auto;
+	max-width:271px;
+	color:#000;
+	font-weight:bold;
+	font-size:18px;
+	border:1px solid #a6a6a6;
+	background:#fff;
+	display:block;
+}
+label.required{
+	display:block;
+	clear:both;
+	border:1px solid #e5a3a3;
+	border-top:none;
+	background:#ffd7d7;
+	color:#793535;
+	font-size:14px;
+	padding:4px 5px 5px;
+}
+
+.Actions{margin-top:-7px;}
+.Actions input{
+	margin:0;
+	padding:0;
+	line-height:0;
+	text-indent:-9999px;
+	overflow:hidden;
+	width:130px;
+	height:48px;
+	background:url(../images/btn-submit.gif) no-repeat;
+	float:right;
+	border:0;
+	cursor:pointer;
+}
+*/
+
+/* FEATURE STYLING */
+/* *************** */
+
+.features .section {
+	clear: both;
+	margin: 0 0 25px;
+}
+
+
+
+.features .left img {
+	float: left;
+}
+
+.features .right img {
+	float: right;
+}
+
+.features .left img, .features .right img {
+	margin: 0 35px 60px;
+}
+
+.features h3 {
+	color: #000;
+	line-height: 1.4em;
+	margin: 0;
+	margin-bottom: .3em;
+	font-size: 24px;
+}
+
+.features h3 a {
+	color: #FF8400;
+	text-decoration: none;
+}
+.features h3 a:hover {
+	color: #2369A1;
+}
+
+
+/* CODA FEATURE STYLING */
+/* ******************** */
+
+#slider {
+	width: 900px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.scroll {
+	height: 370px;
+	overflow: auto;
+	position: relative; /* fix for IE to respect overflow */
+	clear: left;
+	background: #FFFFFF url(images/content_pane-gradient.gif) repeat-x scroll left bottom;
+}
+
+.scroll-container div.panel {
+	padding: 20px;
+	height: 330px;
+	width: 840px; /* change to 560px if not using JS to remove rh.scroll */
+}
+
+ul.navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 9px;
+}
+
+ul.navigation li {
+    display: inline;
+    margin-right: 10px;
+}
+
+ul.navigation a {
+    padding: 10px;
+    color: #000;
+    text-decoration: none;
+}
+
+ul.navigation a:hover {
+    background-color: #f6f6f6;
+}
+
+ul.navigation a.active {
+    background-color: #f6f6f6;
+}
+
+ul.navigation a:focus {
+    outline: none;
+}
+
+.scroll-buttons {
+    position: absolute;
+    top: 150px;
+    cursor: pointer;
+}
+
+.scroll-buttons.left {
+    left: -20px;
+}
+
+.scroll-buttons.right {
+    right: -20px;
+}
+

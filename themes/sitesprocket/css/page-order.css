@@ -1,0 +1,169 @@
+/* Order Form */
+
+
+.form-content {
+	float: left;
+	width: 510px;
+}
+
+.form-content h2, .cart h2 {
+	margin: 0;
+	margin-bottom: 20px;
+	color: #003865;
+}
+
+.section {
+	margin: 10px 0 45px;
+	padding: 0 20px 22px;
+	border: solid 1px #dadada;
+	
+}
+
+.section h3 {
+	background: #fff;
+	color: #6c6c6c;
+	float: left;
+	margin: -15px 0 10px;
+	padding: 0 10px;
+	font-size: 20px;
+}
+
+.product {
+	border: solid 1px #b7b7b7;
+	background: #f4f4f4;
+	margin-top: 22px;
+	padding: 10px;
+}
+
+.selected {
+	border: solid 1px #d9bd7f;
+	background: #f1e2c3;
+}
+
+.product h4 {
+	float: right;
+	color: #003865;
+	margin-top: 0;
+}
+
+.product .field label {
+	font-weight: bold;
+	font-size: 16px;
+	color: #003865;
+}
+
+#main .product p.field {
+	margin: 0;
+	padding: 0;
+}
+
+.description {
+	font-size: 12px;
+	margin: 0 0 25px 27px;
+}
+
+.product .description p {
+	margin: 0 0 10px 0;
+}
+
+
+.product .description ul {
+	padding-left: 20px;
+	list-style: none;
+}
+
+.product .description li {
+	list-style-image: none;
+	background: url('../images/accept.png') no-repeat 0 0;
+	margin: 0 0 7px -10px;
+	padding: 0 0 1px 22px;
+}
+
+
+
+
+/* Cart */
+
+.cart {
+	float: right;
+	width: 386px;
+	padding-left: 40px;
+}
+
+#price-info {
+	position: relative;
+	width: 386px;
+	top: 0;
+	left: 0;
+	
+}
+
+#price-info.floating {
+	position: fixed;
+	top: 26px;
+	left: 915px;
+}
+
+.cart table {
+	width: 100%;
+	background: #f1e2c3;
+	border: solid #d9bd7f;
+	border-width: 1px 0 0 1px;
+	font-size: 14px;
+	color: #5d491b;
+}
+
+.cart table th, .cart table td {
+	padding: 6px;
+	border: solid #d9bd7f;
+	border-width: 0 1px 1px 0;
+}
+
+.cart table th {
+	text-align: left;
+	border-bottom-width: 4px;
+	font-size: 12px;
+}
+
+.cart table td.price, .cart table th.price {
+	width: 120px;
+}
+
+.cart table td.price {
+	color: #2377b9;
+}
+
+
+.cart table .total td {
+	border-top-width: 3px;
+}
+
+.cart .order-section {
+	border-bottom: solid 1px #dadada;
+	overflow: auto;
+	padding: 25px 0;
+}
+
+.cart .order-btn {
+	float: right;
+	outline: none;
+}
+
+.terms, .payments {
+	margin-top: 25px;
+}
+
+.terms strong, .payments strong {
+	color: #003865;
+	font-size: 12px;
+}
+
+.terms p {
+	font-size: 10px;
+}
+
+.payments ul {
+	list-style: none;
+	margin: 7px 0 0 0;
+	padding: 0;
+}

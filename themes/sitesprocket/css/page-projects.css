@@ -1,0 +1,99 @@
+#main h2 {
+	color: #003865;
+	margin: 0 0 12px;
+	/* padding-bottom: 10px; */
+	/* border-bottom: solid 1px #ccc; */
+}
+
+.projects {
+
+}
+
+.paging {
+	float: right;
+	clear: both;
+}
+
+.paging select {
+	font-size: 12px;
+}
+
+.paging .fieldgroupField {
+	float: left;
+	margin-left: 10px;
+}
+
+.projects table {
+	width: 100%;
+	clear: both;
+}
+
+.projects th, td {
+	padding: 10px 0;
+}
+
+.projects th {
+	text-align: left;
+}
+
+.projects th div {
+	border: solid #ccc;
+	border-width: 1px 0;
+	padding: 5px 0;
+}
+
+.projects th div a {
+	display: block;
+	padding: 10px;
+	background: #eee;
+	text-decoration: none;
+	color: #003865;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+.projects th div a:hover {
+	text-decoration: underline;
+}
+
+.projects td {
+	border: solid #D9BD7F;
+	border-width: 1px 0;
+	background: #F1E2C3;
+	padding: 10px 0 10px 10px;
+	color: #5D491B;
+	font-size: 14px;	
+}
+
+.projects td a {
+	text-decoration: none;
+}
+
+.projects td a:hover {
+	text-decoration: underline;
+}
+
+.projects tr.even td {
+	border-width: 0;
+	background: #fff;
+}
+
+.projects .first {
+	width: 525px;
+}
+
+.order {
+	border: solid #ccc;
+	border-width: 1px 0;
+	padding: 10px 0;
+	overflow: auto;
+	margin: 10px 0;
+}
+
+.order a {
+	float: right;
+	width: 208px;
+	height: 61px;
+	background: url('../images/place-new-order.png') no-repeat 0 0;
+	text-indent: -9999px;
+}

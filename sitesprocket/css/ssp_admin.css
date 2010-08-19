@@ -1,0 +1,7 @@
+.sorted.asc {background:#999;}
+.sorted.desc {background:#666;}
+#Form_SearchForm {margin-bottom:50px;}
+#right * {font-size:12px;}
+#left * {font-size:12px;}
+.project_message {border:1px solid #aaa;padding:10px;}
+#right, #left {overflow:auto;}

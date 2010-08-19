@@ -1,0 +1,57 @@
+#Form_AccountForm .field {
+	margin-bottom: 18px;
+	clear: both;
+	overflow: hidden;
+}
+
+#Form_AccountForm .field label, .middleColumn {
+	float: left;
+}
+
+#Form_AccountForm .field label {
+	width: 113px;
+	margin-right: 10px;
+}
+
+#FirstName, #Surname, #City, #State, #Country, #Zip {
+	float: left;
+	clear: none;
+}
+
+#Surname, #State, #Zip {
+	margin-left: 17px;
+}
+
+#FirstName input, #Surname input {
+	width: 113px;
+}
+
+#Surname label {
+	width: 82px;
+}
+
+#State label, #Zip label {
+	width: 45px;
+}
+
+#State select, #Zip input {
+	width: 100px;
+}
+
+#Form_AccountForm #Email input,  
+#Address input, 
+#Phone input {
+	width: 341px;
+}
+
+#City input, #Country select {
+	width: 169px;
+}
+
+#Form_AccountForm .Actions {
+	overflow: auto;
+}
+
+#Form_AccountForm .Actions input {
+	float: right;
+}

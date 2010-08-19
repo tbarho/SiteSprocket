@@ -1,0 +1,177 @@
+/* Features List */
+
+
+.feature-list {
+	float: left;
+	width: 255px;
+}
+
+.feature-main {
+	width: 681px;
+	float: left;
+}
+
+.features-box {
+	background: url('../images/box-grad.gif') no-repeat bottom right;
+	width: 255px;
+	padding-bottom: 158px;
+}
+
+.features-box ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border: solid #d9bd7f;
+	border-width: 1px;
+	background: #f1e2c3;
+	width: 253px;
+	padding-bottom: 25px;
+}
+
+.features-box ul li {
+	position: relative;
+}
+
+.features-box li div {
+	width: 233px;
+	padding: 10px;
+	position: relative;
+	left: -1px;
+	
+	
+}
+
+.features-box li h3 {
+	margin: 0;
+}
+
+.features-box li h3 a {
+	color: #5d491b;
+	text-decoration: none;
+	display: block;
+	background: url('../images/features-arrow.png') no-repeat 217px -19px;
+}
+
+.features-box li.active {
+	border-bottom: solid 3px #d9bd7f;
+}
+
+.features-box li.active div, .features-box li:hover div {
+	background: #fff;
+	border: solid #b7b7b7;
+	border-width: 1px 0;
+	padding: 9px 12px 9px 10px;
+}
+
+.features-box li.active h3 a, .features-box li:hover h3 a {
+	color: #003865;
+	background-position: 217px 1px;
+}
+
+
+/* Content Area */
+
+.feature-main {
+	width: 660px;
+}
+
+.features-wrap {
+	padding-left: 50px;
+}
+
+.features-heading {
+	border-bottom: solid 1px #dadada;
+	overflow: auto;
+	padding-bottom: 25px;
+	margin-bottom: 25px;
+}
+
+.title {
+	float: left;
+}
+
+.title h1 {
+	font-size: 36px;
+	color: #626262;
+	margin: 21px 0 0;
+}
+
+.title strong {
+	color: #9f9f9f;
+}
+
+#video-container {
+	display: none;
+	margin-bottom: 20px;
+}
+
+#close-video {
+	font-size: 12px;
+	color: #626262;
+	text-decoration: none;
+}
+
+#close-video:hover {
+	color: #2377B9;
+}
+
+#player {
+	margin-top: 10px;
+}
+
+.video {
+	float: right;
+	
+}
+
+#thumb {
+	background: url('../images/video-bg.png') no-repeat top left;
+	padding: 8px;
+}
+
+.video p {
+	margin: 5px 0 0 19px;
+}
+
+.video p a {
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.cols {
+	clear: both;
+	overflow: auto;
+	margin-bottom: 75px;
+}
+
+.col-1 {
+	float: left;
+	width: 45%;
+}
+
+.col-2 {
+	float: right;
+	width: 45%;
+}
+
+.cols p {
+	font-size: 14px;
+	margin: 0;
+}
+
+.f-thumb {
+	background: url('../images/feature-border.png') no-repeat top left;
+	padding: 17px 0 11px 6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

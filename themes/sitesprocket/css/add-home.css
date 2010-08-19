@@ -1,0 +1,42 @@
+.frame-home {
+	float: left;
+	width: 100%;
+	margin-top: -13px;
+	background: url('../images/home-main-test.png') no-repeat top right;
+}
+
+.better {
+	width: 45%;
+	float: left;
+	clear: left;
+}
+
+#gallery h1.better {
+	margin-bottom: -10px;
+}
+
+a.better {
+	margin: 20px 0;
+	margin-left: 40px;
+}
+
+.splash {
+	float: right;
+}
+
+
+#gallery .info span.btn, #gallery .info span.btn a {
+	font-size: 12px;
+	font-weight: normal;
+	margin-top: -52px;
+	/* color: #93602c; old orange color */
+	color: #456600;
+}
+
+#gallery .info span.btn a {
+	font-style: italic;
+}
+
+#gallery .info span.bottom {
+	margin-top: 32px;
+}

@@ -1,0 +1,383 @@
+/* All Forms */
+
+div.field {
+	margin-bottom: 18px;
+	clear: both;
+	overflow: hidden;
+}
+
+.field label, .middleColumn {
+	float: left;
+}
+
+.field label {
+	float:left;
+	padding:7px 0 0;
+	width:135px;
+	font-weight:bold;
+	font-size:18px;
+	color:#646464;
+}
+
+.checkbox label {
+	float: none;
+}
+
+.field input.text {
+	margin:0;
+	padding:6px 5px 8px;
+	color:#000;
+	font-weight:bold;
+	font-size:18px;
+	border:1px solid #a6a6a6;
+	background:#fff;
+	display:block;
+	width:224px;
+	float:left;
+}
+
+.field textarea {
+	margin:0;
+	padding:6px 5px 8px;
+	color:#000;
+	font-weight:bold;
+	font-size:18px;
+	border:1px solid #a6a6a6;
+	background:#fff;
+	display:block;
+	width:224px;
+	float:left;
+}
+
+
+.field select {
+	margin: 2px 0 0;
+	padding: 3px 0;
+}
+
+.optionset .middleColumn {
+	float: none;
+	clear: both;
+}
+
+.optionset label {
+	float: none;
+}
+
+.optionset ul {
+	margin: 10px 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.optionset li label {
+	font-weight: normal;
+}
+
+.Actions {
+	overflow: hidden;
+}
+
+.Actions input {
+	float: right;
+}
+
+.Actions input {
+	background: url('../images/submit.png') no-repeat 0 0 transparent;
+	border: 0 none;
+	text-indent: -9999px;
+	width: 147px;
+	height: 62px;
+	line-height: 0;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+}
+
+
+/* Validation Error Styles */
+
+span.message {
+	background: none repeat scroll 0% 0% rgb(255, 215, 215); 
+	float: right;  
+	clear: left; 
+	padding: 8px 10px; 
+	border: solid #E5A3A3; 
+	border-width: 0 1px 1px; 
+	font-size: 12px;
+	font-weight: bold; 
+	color: #793535;
+}
+
+
+/* Uploadify Styles */
+
+.upload-container {
+	padding-left: 24px;
+	margin-bottom: 10px;
+}
+
+.uploadify-field {
+	background: url('../images/add-files.png') no-repeat top left;
+}
+
+.uploadify-field object {
+	width: 205px;
+}
+
+.upload-text {
+	font-size: 12px;
+}
+
+
+
+/* Create Account Form */
+
+#FirstName, #Surname, #City, #State, #Country, #Zip {
+	float: left;
+	clear: none;
+}
+
+#Surname, #State, #Zip {
+	margin-left: 17px;
+}
+
+#FirstName input, #Surname input {
+	width: 92px;
+}
+
+#Surname label {
+	width: 110px;
+}
+
+#State label, #Zip label {
+	width: 60px;
+}
+
+#State select, #Zip input {
+	width: 100px;
+}
+
+#Email input,  
+#Address input, 
+#Phone input {
+	width: 323px;
+}
+
+#City input, #Country select {
+	width: 146px;
+}
+
+#FirstName .message {
+	width: 82px;
+}
+
+#Email .message, #Address .message {
+	width: 313px;
+	margin-right: 2px;
+}
+
+#Password .message {
+	float: left;
+	margin-left: 135px;
+	width: 214px;
+}
+
+#Form_AccountForm .Actions input {
+	background: url('../images/create-pay.png') no-repeat 0 0 transparent;
+}
+
+/* Login Form */
+
+#MemberLoginForm_LoginForm {
+	width: 374px;
+}
+
+#MemberLoginForm_LoginForm  #Email input {
+	width: 224px;
+}
+
+#MemberLoginForm_LoginForm #Remember label {
+	font-size: 12px;
+	font-weight: normal;
+}
+
+#MemberLoginForm_LoginForm .Actions {
+
+}
+#MemberLoginForm_LoginForm .Actions input {
+	clear: both;
+}
+input#MemberLoginForm_LoginForm_action_dologin {
+	background: url('../images/sign-in.png') no-repeat 0 0 transparent;
+}
+input#MemberLoginForm_LoginForm_action_logout {
+	background: url('../images/sign-out.png') no-repeat 0 0 transparent;
+}
+#MemberLoginForm_LoginForm .Actions p {
+	clear: both;
+	float: right;
+	font-size: 12px;
+}
+
+
+/* Payment Form */
+
+/*
+#Form_PaymentForm_CardType li {
+	clear: both;
+	height: 26px;
+	width: 64px;
+	float: left;
+	clear: none;
+}
+
+#Form_PaymentForm_CardType li input {
+	background: #fff;
+}
+
+#Form_PaymentForm_CardType li {
+	background: url(../images/checkout-sprite.gif) no-repeat 0 0;
+}
+
+#Form_PaymentForm_CardType li.valVisa {
+	background-position: -174px -25px;
+}
+
+.optionset label.ui-button {
+	float: left;
+	font-size: 12px;
+	padding: 0;
+	margin-right: -0.3em;
+	padding-left: 10px;
+}
+
+.optionset label.ui-state-hover {
+	color: #c77409;
+}
+*/
+
+#CardNumber label {
+	margin-bottom: 10px;
+	clear: both;
+	display: block;
+	float: none;
+}
+
+#CardNumber input {
+	margin:0;
+	padding:6px 5px 8px;
+	color:#000;
+	font-weight:bold;
+	font-size:18px;
+	border:1px solid #a6a6a6;
+	background:#fff;
+	display:inline-block;
+	width:50px;
+}
+
+#CardType li {
+	float: left;
+	background: url(../images/credit-cards.png) no-repeat 0 0;
+	height: 33px;
+	width: 52px;
+	margin: 5px;
+	text-indent: -9999px;
+	opacity: 0.3;
+}
+
+
+#CardType .visa {
+	background-position: 0 0;
+}
+
+#CardType .mc {
+	background-position: -65px 0;
+}
+
+#CardType .ae {
+	background-position: -130px 0;
+}
+
+#CardType .disc {
+	background-position: -195px 0;
+}
+
+#ExpMonth, #ExpYear, #CCV {
+	float: left;
+	clear: none;
+	overflow: auto;
+}
+
+#CCV {
+	margin-left: 35px;
+}
+
+#ExpMonth label {
+	width: 100px;
+}
+
+#ExpYear label {
+	width: 10px;
+	margin: 0 10px;
+}
+
+#ExpYear select {
+	width: 100px;
+}
+
+#CCV label {
+	width: 45px;
+}
+
+#CCV input {
+	width: 45px;
+}
+
+#ccv-dialog {
+	background: url('../images/cv_card.jpg') no-repeat -294px -39px;
+	height: 220px;
+	width: 258px;
+	position: absolute;
+	top: 486px;
+	right: 560px;
+	text-indent: -9999px;
+	display: none;
+}
+
+.divider {
+	height: 0;
+	max-height: 0;
+	text-indent: -9999px;
+	border-bottom: dashed 1px #a6a6a6;
+	clear: both;
+	margin:30px 0 30px 0;
+	overflow: auto;
+	display: block;
+}
+
+#Form_PaymentForm_HeaderFieldBilling-information {
+	clear: both;
+}
+
+#Title input, #Notes textarea {
+	width: 280px;
+}
+
+#Form_PaymentForm .Actions input {
+	background: url('../images/order-now-large.png') no-repeat 0 0 transparent;
+	border: 0 none;
+	text-indent: -9999px;
+	width: 208px;
+	height: 62px;
+	line-height: 0;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+}
+
+
+
+

@@ -1,0 +1,221 @@
+.none {
+	display: none;
+}
+
+.content {
+	float: left;
+	width: 657px;
+}
+
+.sidebar {
+	float: right;
+	width: 259px;
+	padding-left: 20px;
+	margin-top: 35px;
+}
+
+.crumbs {
+	margin: 0 0 15px;
+}
+
+.crumbs a {
+	text-decoration: none;
+	font-size: 12px;
+}
+
+.crumbs a:hover {
+	text-decoration: underline;
+}
+
+.head {
+	
+	margin-bottom: 10px;
+	color: #003865;
+}
+
+.head strong {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.head em {
+	display: block;
+	font-size: 12px;
+}
+
+/* All Posts */
+
+.post {
+	font-size: 12px;
+	margin-bottom: 15px;
+}
+
+.post .you, .post .admin {
+	padding: 15px;
+}
+
+.post .title {
+	font-style: italic;
+	margin-bottom: 20px;
+}
+
+.post .title strong {
+	font-size: 16px;
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+.order, .uploads {
+	list-style: none;
+}
+
+.order {
+	margin: 10px 0 10px 20px;
+	padding: 0;
+	width: 325px;
+}
+
+.order li {
+	font-size: 14px;
+	font-weight: bold;
+	border-bottom: solid 1px #D9BD7F;
+	padding-bottom: 15px;
+	margin-top: 15px;
+}
+
+/* Uploads */
+
+.uploads {
+	margin: 0 15px;
+	padding: 10px 0;
+}
+
+.order li strong {
+	float: right;
+}
+
+.uploads li {
+	border-bottom: none;
+	font-weight: normal;
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+}
+
+.uploads em {
+	font-style: italic;
+}
+
+/* Payments */
+
+.payment {
+	margin: 30px 0;
+}
+
+.payment a {
+	padding: 5px 10px;
+	color: #fff;
+	background: #55aaea;
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: none;
+	/*
+border-top: solid 1px #a2d7fe;
+	border-left: solid 1px #a2d7fe;
+	border-right: solid 1px #2475b2;
+	border-bottom: solid 1px #2475b2;
+*/
+}
+
+.payment a:hover {
+	background: #003865;
+}
+
+
+/* You Posts */
+
+.post .you {
+	background: #F1E2C3;
+	color: #5d491b;
+}
+
+.post .you .title {
+	color: #003865;
+}
+
+
+/* Admin Posts */
+
+.post .admin {
+	background: #fff;
+	color: #626262;
+}
+
+.post .admin .title {
+	color: #448700;
+}
+
+
+
+/* Message */
+.message {
+	padding-top: 20px;
+	margin-top: 20px;
+	border-top: solid 1px #ccc;
+}
+
+.message strong {
+	font-size: 20px;
+	font-weight: bold;
+	color: #003865;
+}
+
+#MessageText textarea {
+	height: 130px;
+	max-width: 610px;
+	width: 610px;
+}
+
+.upload-container {
+	margin: 20px 0;
+}
+
+.message .submit {
+	overflow: auto;
+}
+
+.message .submit input {
+	float: right;
+	
+}
+
+#MessageText label {
+	display: none;
+}
+
+#Form_CreateMessageForm_action_doCreateMessage {
+	background: url('../images/post-message.png') no-repeat 0 0;
+}
+
+
+
+/* Sidebar Styles */
+
+.sidebar h3 {
+	margin: 0 0 10px 0;
+	color: #003865;
+	font-size: 16px;
+}
+
+.sidebar ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.sidebar p, .sidebar ul {
+	margin: 0;
+	margin-bottom: 25px;
+	font-size: 12px;
+}
