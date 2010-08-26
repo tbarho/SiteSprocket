@@ -214,7 +214,13 @@ class SiteSprocket_Controller extends Page_Controller implements PermissionProvi
 	 * @return SSViewer
 	 */
 	public function index() {
-		return Director::redirect($this->Link('order'));
+		// If the user is already logged in, go to the projects action, otherwise go to the order action
+		if(Member::currentUser()) {
+			return Director::redirect($this->Link('projects'));
+		} else {
+			return Director::redirect($this->Link('order'));
+		}
+		
 	}
 
 	
