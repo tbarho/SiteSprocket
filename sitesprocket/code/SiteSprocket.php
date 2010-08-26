@@ -859,7 +859,7 @@ class SiteSprocket_Controller extends Page_Controller implements PermissionProvi
 	public function doCreateAccount($data, $form) {
 		
 		// Make sure we have a place to store the member
-		$group = DataObject::get_one('Group', "Code = '".SiteSprocketConfig::MEMBER_GROUP_NAME."'");
+		$group = DataObject::get_one('Group', "Code = 'site-sprocket-clients'");
 		if(!$group) die('there is not a group for SiteSprocket.  Please make one');  // TB
 		
 		if($member = DataObject::get_one("Member", "`Email` = '". Convert::raw2sql($data['Email']) . "'")) {
