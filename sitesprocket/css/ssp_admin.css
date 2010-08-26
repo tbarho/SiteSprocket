@@ -1,3 +1,6 @@
+/* Aaron CSS */
+
+/*
 .sorted.asc {background:#999;}
 .sorted.desc {background:#666;}
 #Form_SearchForm {margin-bottom:50px;}
@@ -5,3 +8,63 @@
 #left * {font-size:12px;}
 .project_message {border:1px solid #aaa;padding:10px;}
 #right, #left {overflow:auto;}
+*/
+
+
+/* Updates from Ty */
+#right, #left {
+	overflow: auto;
+}
+
+#treepanes {
+	padding: 8px 0 0 8px;
+}
+
+ul#projecttree ul {
+	margin-left: 0;
+}
+
+#ModelAdminPanel {
+}
+
+.search-form {
+	padding: 10px;
+}
+
+#Form_SearchForm {
+	margin-bottom: 50px;
+	
+}
+
+.autocomplete {
+	background: #eee;
+}
+
+.right form .field .middleColumn {
+	background: #eee;
+}
+
+.projects {
+	padding: 0 58px 0 23px;	
+}
+
+table.project_results {
+	width: 100%;
+}
+
+.project_results th {
+	text-align: left;
+	font-size: 14px;
+}
+
+.sorted.asc {
+	color: #0000ff;
+}
+
+.sorted.desc {
+	color: #ff0000;
+}
+
+.project_results td, .project_results th {
+	padding-bottom: 8px;
+}
