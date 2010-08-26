@@ -860,7 +860,11 @@ class SiteSprocket_Controller extends Page_Controller implements PermissionProvi
 		
 		// Make sure we have a place to store the member
 		$group = DataObject::get_one('Group', "Code = 'site-sprocket-clients'");
-		if(!$group) die('there is not a group for SiteSprocket.  Please make one');  // TB
+		if(!$group) {
+			$form->addErrorMessage("Blurb",'Sorry, you need to set a group for clients to be added to.  Have the webmaster see the configuration file for details.', "bad");
+			Session::set("FormInfo.Form_AccountForm.data", $data);
+			return Director::redirectBack();
+		}
 		
 		if($member = DataObject::get_one("Member", "`Email` = '". Convert::raw2sql($data['Email']) . "'")) {
 			$form->addErrorMessage("Blurb",_t('SSP.EMAILEXISTS','Sorry, that email address already exists. Please choose another.'),"bad");
