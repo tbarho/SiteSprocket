@@ -14,10 +14,17 @@ $SearchForm
 		<div class="project-right">
 			<div id="update_message"></div>
 			<% if CurrentMember.isAdmin %>
+			<div class="assign">
+				<h3>Assign To:</h3>	
 				$CSRDropdown
+			</div>
 			<% end_if %>
-			$StatusDropdown
+			<div class="status">
+				<h3>Update Status:</h3>
+				$StatusDropdown
+			</div>
 			<% if Project.OtherProjects %>
+				<div class="other-projects">
 				<h3><% _t('SSPAdmin.OTHERPROJECTS','Other projects for this user') %></h3>
 				<% control Project %>
 					<ul>
@@ -26,6 +33,7 @@ $SearchForm
 					<% end_control %>
 					</ul>
 				<% end_control %>
+				</div>
 			<% end_if %>
 		</div>
 		<div style="clear:both;"></div>
