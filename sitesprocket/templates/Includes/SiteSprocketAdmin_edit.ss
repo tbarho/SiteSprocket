@@ -20,7 +20,7 @@ $SearchForm
 			</div>
 			<% end_if %>
 			<div class="status">
-				<h3>Update Status:</h3>
+				<h3>Status:</h3>
 				$StatusDropdown
 			</div>
 			<% if Project.OtherProjects %>
