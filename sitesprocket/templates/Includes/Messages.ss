@@ -1,8 +1,8 @@
 <% control Messages %>
-	<div class="project_message">
-		<div>$Author.Name</div>
-		<div>$Created.Nice</div>
-		$MessageText
+	<div class="project_message<% if You %> you<% end_if %>">
+		<div class="title">$Author.Name said on $Created.Nice</div>
+		<div class="body">$MessageText</div>
+		<div class="attachments">
 		<% if Attachments %>
 			<ul>
 			<% control Attachments %>
@@ -10,6 +10,8 @@
 			<% end_control %>
 			</ul>	
 		<% end_if %>
+		</div>
+		<div class="payment-option">
 		<% if PaymentOption %>
 			<div>
 				<% control PaymentOption %>
@@ -18,5 +20,6 @@
 				<% end_control %>
 			</div>
 		<% end_if %>
+		</div>
 	</div>
 <% end_control %>
