@@ -1,6 +1,6 @@
 <% control Messages %>
 	<div class="project_message<% if You %> you<% end_if %>">
-		<div class="title">$Author.Name said on $Created.Nice</div>
+		<div class="title"><strong>$Author.Name</strong> said on $Created.Nice</div>
 		<div class="body">$MessageText</div>
 		<div class="attachments">
 		<% if Attachments %>
