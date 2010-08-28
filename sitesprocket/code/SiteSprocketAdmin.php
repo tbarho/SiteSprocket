@@ -652,7 +652,7 @@ class SiteSprocketAdmin extends LeftAndMain implements PermissionProvider
 	 * @return DropdownField
 	 */
 	public function CSRDropdown() {
-		if($group = DataObject::get_one("Group", "Code = '".SiteSprocketConfig::CSR_GROUP_NAME."'")) {
+		if($group = DataObject::get_one("Group", "Code = 'sitesprocket-csr'")) {
 			if($members = $group->Members()) {
 				$val = ($this->Project) ? $this->Project->CSRID : null;
 				$d = new DropdownField("CSRID", _t('SSPAdmin.ASSIGNTOCSR','Assign to'), $members->toDropdownMap(), $val);
@@ -684,15 +684,22 @@ class SiteSprocketAdmin extends LeftAndMain implements PermissionProvider
 		if($project = $this->getFromRequest("SiteSprocketProject")) {
 		UploadifyField::set_var('script', '/'.Controller::join_links(self::$site_sprocket->Link('upload')));
 		UploadifyField::set_var('multi', true);
+		$u = new UploadifyField('Attachments', _t('SSPAdmin.UPLOADATTACHMENT','Upload a file'));
+		$u->setVar('width','115');
+		$u->setVar('wmode','transparent');
 			return new Form (
 				$this,
 				"CreateMessageForm",
 				new FieldSet (
+					new LiteralField('divMessageOpen', '<div class="add-message">'),
 					new TextareaField('MessageText', _t('SSPAdmin.MESSAGETEXT','Message')),
-					new UploadifyField('Attachments', _t('SSPAdmin.UPLOADATTACHMENT','Upload a file')),
+					$u,
+					new LiteralField('divMessageClose', '</div>'),
+					new LiteralField('divPaymentOpen', '<div class="payment-option">'),
 					new HeaderField($title = _t('SSPAdmin.ADDPAYMENTOPTION','Add payment option'), $headingLevel = 4),
 					new NumericField('Cost', _t('SSPAdmin.ADDPAYMENTCOST','Additional cost')),
 					new TextareaField('Description', _t('SSPAdmin.ADDPAYMENTDESCRIPTION','Description (for invoice)')),
+					new LiteralField('divPaymentClose', '</div>'),
 					new HiddenField('ID','', $project->ID)
 				),
 				new FieldSet (
