@@ -11,15 +11,15 @@
 			</ul>	
 		<% end_if %>
 		</div>
-		<div class="payment-option">
 		<% if PaymentOption %>
+		<div class="payment-option">
 			<div>
 				<% control PaymentOption %>
 					<% _t('SSPAdmin.PAYMENTOPTION','Payment option') %>: $Description ($Cost.Nice)
 					<% _t('SSPAdmin.PAID','Paid?') %> $Paid.Nice
 				<% end_control %>
 			</div>
-		<% end_if %>
 		</div>
+		<% end_if %>
 	</div>
 <% end_control %>
