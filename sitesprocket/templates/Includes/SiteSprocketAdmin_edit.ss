@@ -2,7 +2,7 @@ $SearchForm
 <% if Project %>
 	<div id="project" class="{'id' : '$Project.ID'}">
 		<div><a rel="right" href="$Link(results)"><% _t('SSPAdmin.BACK','Back') %></a></div>
-		<div style="width:500px;float:left;margin-right:20px;">
+		<div class="project-left">
 			<% control Project %>
 				<h2>$Title</h2>
 				<div id="messages">
@@ -11,7 +11,7 @@ $SearchForm
 			<% end_control %>
 	
 		</div>
-		<div style="width:200px;float:left;">
+		<div class="project-right">
 			<div id="update_message"></div>
 			<% if CurrentMember.isAdmin %>
 				$CSRDropdown
