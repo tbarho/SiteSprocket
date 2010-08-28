@@ -1,7 +1,7 @@
 <h2><% _t('SSPAdmin.PROJECTSNAV','Projects') %></h2>
-<div id="treepanes">
-	<ul id="projecttree" class="tree">
-		<li id="record-root" class="Root last">
+<div>
+	<ul class="tree">
+		<li class="Root last">
 			<span class="a Root last">
 				<span class="b">
 					<span class="c"><a href="#"><strong>Select a View:</strong></a></span>
