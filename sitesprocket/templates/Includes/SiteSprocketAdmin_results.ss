@@ -7,5 +7,5 @@
 		</table>
 	</div>
 <% else %>
-	<% _t('SSPAdmin.NOPROJECTS','There are no projects that meet your criteria') %>
+	<p class="no-results"><% _t('SSPAdmin.NOPROJECTS','There are no projects that meet your criteria') %></p>
 <% end_if %>
