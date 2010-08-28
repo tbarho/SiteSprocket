@@ -44,6 +44,21 @@ ul#projecttree ul {
 	background: #eee;
 }
 
+/* Project Lists */
+
+#sspadmin_right h3 {
+	font-size: 24px;
+	color: #666;
+	margin: 0 0 16px 22px;
+}
+
+#right p.no-results {
+	font-size: 12px;
+	color: #666;
+	font-style: italic;
+	margin: 10px 0 0 22px;
+}
+
 .projects {
 	padding: 0 58px 0 23px;	
 }
@@ -57,6 +72,16 @@ table.project_results {
 	font-size: 14px;
 }
 
+.project_results tfoot .fieldgroup {
+	float: right;
+	margin: 30px 35px 0 0;
+}
+.project_results tfoot .fieldgroupField {
+	float: left;
+	margin-right: 7px;
+	font-size: 12px;
+}
+
 .sorted.asc {
 	color: #0000ff;
 }
@@ -68,3 +93,185 @@ table.project_results {
 .project_results td, .project_results th {
 	padding-bottom: 8px;
 }
+
+
+/* Project Details */
+
+#project {
+	margin-left: 22px;
+}
+
+#project h2 {
+	font-size: 28px;
+}
+
+#project h3 {
+	font-size: 14px;
+}
+
+.project-left {
+	float: left;
+	width: 45%;
+}
+
+.project-right {
+	float: left;
+	width: 25%;
+	margin-left: 20px;
+}
+
+.project_message {
+	border: solid 1px #666;
+	padding: 10px;
+	margin-bottom: 15px;
+}
+
+.project_message.you {
+	background: #ddd;
+}
+
+.project_message .author {
+	font-size: 14px;
+	background: none;
+	color: #666;
+}
+
+.project_message .author strong {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.project_message .body {
+	margin: 10px 0;
+	font-size: 12px;
+}
+
+.project_message .body div {
+	margin-bottom: 10px;
+	font-size: 12px;
+}
+
+#project .project_message .body h3 {
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.payment-option {
+	background: #ccdef3;
+	border: solid 1px #acbbcc;
+	padding: 9px 15px;
+	color: #0074C6;
+}
+
+.project-right div {
+	clear: both;
+	margin-bottom: 20px;
+	overflow: auto;
+}
+
+#project .project-right h3 {
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+#project .project-right .other-projects h3 {
+	float: none;
+}
+
+#add_message {
+	border: solid 1px #a7a7a7;
+	padding: 10px;
+	position: relative;
+	width: 850px;
+	margin: 20px 0 40px;
+}
+
+#add_message h3 {
+	margin: 0;
+	background: #eee;
+	position: absolute;
+	top: -14px;
+	left: 15px;
+	padding: 0 10px;
+	font-size: 20px;
+}
+
+.add-message {
+	float: left;
+	width: 550px;
+}
+
+#add_message .payment-option {
+	float: right;
+	width: 220px;
+}
+
+#add_message .payment-option h4 {
+	color: #0074C6;
+	margin: 0;
+	margin-bottom: 10px;
+}
+
+#add_message .payment-option label {
+	color: #0074C6;
+}
+
+#add_message .payment-option .middleColumn {
+	background: none;
+}
+
+#add_message .upload-container {
+	padding-left: 24px;
+	margin-bottom: 10px;
+}
+
+#add_message .uploadify-field {
+	background: url(/sitesprocket/images/add-file.png) no-repeat top left;
+	margin: 15px 0 15px 5px;
+}
+
+#add_message .uploadify-field object {
+	width: 115px;
+}
+
+#add_message .upload-text {
+	font-size: 12px;
+}
+
+#add_message .uploadify-filename {
+	background: url(/sitesprocket/images/page_add.png) no-repeat 0 5px;
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	margin-left: 15px;
+	padding: 5px;
+	padding-left: 20px;
+	color: #003865;
+}
+
+
+#add_message .uploadifyQueue {
+	margin-top: 8px;
+}
+
+#add_message .Actions {
+	margin: 10px 0;
+	text-align: right;
+	padding-right: 292px;
+}
+
+#add_message .Actions input {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
