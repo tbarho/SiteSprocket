@@ -79,21 +79,6 @@
 	padding: 0 0 1px 22px;
 }
 
-.uploadify-filename {
-	background: url(../images/page_add.png) no-repeat 0 5px;
-	font-size: 12px;
-	font-style: italic;
-	font-weight: bold;
-	margin-left: 15px;
-	padding: 5px;
-	padding-left: 20px;
-	color: #003865;
-}
-
-
-.uploadifyQueue {
-	margin-top: 8px;
-}
 
 
 
