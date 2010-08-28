@@ -274,6 +274,10 @@ input#MemberLoginForm_LoginForm_action_logout {
 }
 */
 
+#Form_PaymentForm {
+	position: relative;
+}
+
 #CardNumber label {
 	margin-bottom: 10px;
 	clear: both;
@@ -353,11 +357,11 @@ input#MemberLoginForm_LoginForm_action_logout {
 
 #ccv-dialog {
 	background: url('../images/cv_card.jpg') no-repeat -294px -39px;
-	height: 220px;
-	width: 258px;
 	position: absolute;
-	top: 486px;
-	right: 560px;
+	top: 162px;
+	left: 442px;
+	width: 258px;
+	height: 220px;
 	text-indent: -9999px;
 	display: none;
 }
