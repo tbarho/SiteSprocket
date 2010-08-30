@@ -22,6 +22,18 @@ class SiteSprocket extends Page
 		$f->addFieldToTab("Root.Content.On Submit", new HtmlEditorField('OnSubmit', _t('SSP.ONSUBMIT','On submit text')));
 		return $f;
 	}
+	
+	public function onBeforeDelete() {
+		parent::onBeforeDelete();
+		foreach($this->ProductGroups() as $group) {
+			$group->delete();
+		}
+	}
+	
+	public function onBeforeDelete() {
+		parent::onBeforeDelete();
+		$this->destroy();
+	}
 }
 
 
