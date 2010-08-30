@@ -43,7 +43,9 @@ $(function() {
 				$(this).ajaxSubmit({
 					target : '#messages',
 					success : function() {
-						$('textarea, input[name=Attachments').val('');
+						$('textarea').val('');
+						$('.uploadify-filename').remove();
+						$('input[name^=Attachments]').remove();
 					}
 				});
 				return false;
