@@ -8,8 +8,9 @@
 						Projects & Tickets
 						</h1>
 						<ul id="sub-nav">
-							<li><a href="$Link(profile)">Edit Your Profile</a></li>
-							<li><a href="/Security/logout">Logout</a></li>
+							<li><a href="$Link(projects)"><% _t('SSP.YOURPROJECTS','Projects & Tickets') %></a></li>
+							<li><a href="$Link(profile)"><% _t('SSP.EDITPROFILE','Edit profile') %></a></li>
+							<li><a href="/Security/logout"><% _t('SSP.LOGOUT','Logout') %></a></li>
 						</ul>
 					</div>
 				</div>
