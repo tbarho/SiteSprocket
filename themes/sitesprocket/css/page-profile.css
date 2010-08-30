@@ -1,0 +1,33 @@
+.left {
+	float: left;
+	width: 400px;
+}
+
+.right {
+	float: right;
+	width: 502px;
+}
+
+#Form_ProfileForm h3 {
+	font-size: 12px;
+	font-weight: normal;
+	height: 30px;
+}
+
+#Form_ProfileForm #Email input {
+	width: 224px;
+}
+
+#Form_ProfileForm #Company input {
+	width: 323px;
+}
+
+#Form_ProfileForm .Actions {
+	border-top: solid 1px #CCCCCC;
+	padding-top: 30px;
+	margin-top: 10px;
+}
+
+#Form_ProfileForm .Actions input {
+	margin-right: 27px;
+}
