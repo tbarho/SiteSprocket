@@ -103,6 +103,18 @@ class UploadifyField extends FormField
 		), _t('Uploadify.IMAGES','Images'));
 	}
 	
+	public function imagesPlusPhotoshop() {
+		$this->setFileTypes(array(
+			'jpeg','jpg','gif','png','psd'
+		), _t('Uploadify.IMAGESPSD', 'Images & Photoshop Files'));
+	}
+	
+	public function sitesprocketFiles() {
+		$this->setFileTypes(array(
+			'jpeg','jpg','gif','png','psd','zip','gz'
+		), _t('Uploadify.SITESPROCKETFILES', 'SiteSprocket Files'));
+	}
+	
 	protected function loadFileTypes() {
 		if(!empty($this->fileTypes)) {
 			$this->setVar('fileExt','*.'.implode(';*.',$this->fileTypes));
