@@ -23,17 +23,7 @@ class SiteSprocket extends Page
 		return $f;
 	}
 	
-	public function onBeforeDelete() {
-		parent::onBeforeDelete();
-		foreach($this->ProductGroups() as $group) {
-			$group->delete();
-		}
-	}
-	
-	public function onBeforeDelete() {
-		parent::onBeforeDelete();
-		$this->destroy();
-	}
+
 }
 
 
