@@ -4,12 +4,13 @@
 	<div class="options">
 		<div class="option">
 			<% control Option %>
-			<div class="title">$Title ($Price.Nice)</div>
+			<div class="title">$Title <span>$Price.Nice</span></div>
+			<div class="description">$Description</div>
 			<% end_control %>
 			<% if Attachments %>
 			<ul class="uploads">
 				<% control Attachments %>
-				<li>$Name <% _t('SSP.ATTACHED','attached') %> (<a href="$URL">download</a>)</li>
+				<li>$Name <% _t('SSP.ATTACHED','attached') %> <a href="$URL">download</a></li>
 				<% end_control %>
 			</ul>
 			<% end_if %>
