@@ -91,7 +91,7 @@ class SiteSprocket_Controller extends Page_Controller implements PermissionProvi
 	 * @return DataObjectSet
 	 */
 	public static function get_selected_options() {
-		if($data = Session::get("SSP_Options")) {
+		if($data = $_SESSION['SSP_Options']) {
 			$set = new DataObjectSet();
 			foreach($data as $id) {
 				$set->push(DataObject::get_by_id("SiteSprocketProductOption", $id));
@@ -190,8 +190,13 @@ class SiteSprocket_Controller extends Page_Controller implements PermissionProvi
 		Requirements::javascript(THIRDPARTY_DIR.'/jquery/jquery.js');
 		Requirements::javascript(THIRDPARTY_DIR.'/jquery-metadata/jquery.metadata.js');
 		Requirements::javascript('sitesprocket/javascript/behaviour.js');
-		
-		//Requirements::css('themes/sitesprocket/css/page-order.css');
+		if(!isset($_SESSION['SSP_Options'])) {
+			$_SESSION['SSP_Options'] = array();
+		}
+		if(!isset($_SESSION['SSP_OptionFiles'])) {
+			$_SESSION['SSP_OptionFiles'] = array();
+		}
+
 	}
 
 
@@ -528,7 +533,7 @@ class SiteSprocket_Controller extends Page_Controller implements PermissionProvi
 		
 		// Check for data that has been stored in the session
 		$data = Session::get("FormInfo.Form_OrderForm.data");
-		$selected = Session::get("SSP_Options") ? Session::get("SSP_Options") : array();
+		$selected = $_SESSION['SSP_Options'];
 		$fields = new FieldSet();
 		if($groups = $this->ProductGroups()) {
 			foreach($groups as $g) {
@@ -619,7 +624,6 @@ class SiteSprocket_Controller extends Page_Controller implements PermissionProvi
 		}
 		$data = Session::get("FormInfo.Form_PaymentForm.data");			
 		$m = Member::currentUser();
-		// TB - Many Edits to this form.  Mostly rearranging, getting rid of useless Dropdown, and adding literals
 		$form = new Form (
 			$this,
 			"PaymentForm",
@@ -652,7 +656,6 @@ class SiteSprocket_Controller extends Page_Controller implements PermissionProvi
 				new LiteralField('divider', '<div class="divider">&nbsp;</div><h2>Additional Info</h2><p>Name your project, and enter any special notes or instructions.</p>'),
 				new TextField('Title', _t('SSP.PROJECTTITLE','Project title')),
 				new TextareaField('Notes', _t('SSP.PROJECTNOTES','Notes'))		
-				
 				
 			),
 			new FieldSet (
@@ -823,7 +826,7 @@ class SiteSprocket_Controller extends Page_Controller implements PermissionProvi
 		}
 		
 		// Store all of the options in session, and render the new price table.	
-		Session::set("SSP_Options", $option_ids);
+		$_SESSION['SSP_Options'] = $option_ids;
 		if(Director::is_ajax()) {
 			return $this->renderWith(array('PriceTable'));
 		}
@@ -849,7 +852,7 @@ class SiteSprocket_Controller extends Page_Controller implements PermissionProvi
 			}
 		}
 		// Keep the files in session. We can't use them until the order has been paid for and a project created.
-		Session::set("SSP_OptionFiles", $option_files);
+		$_SESSION['SSP_OptionFiles'] = $option_files;
 		
 		return Director::redirect($this->Link('account'));
 	}
@@ -863,7 +866,6 @@ class SiteSprocket_Controller extends Page_Controller implements PermissionProvi
 	 * @return SSViewer
 	 */
 	public function doCreateAccount($data, $form) {
-		
 		// Make sure we have a place to store the member
 		$group = DataObject::get_one('Group', "Code = 'site-sprocket-clients'");
 		if(!$group) {
@@ -939,7 +941,7 @@ $AuthNet = self::build_auth_net($data);
 		//$p->AuthNetApprovalCode = $AuthNet->getApprovalCode();
 		$p->write();
 		$p->CreatorID = Member::currentUserID();
-		$files = Session::get("SSP_OptionFiles") ? Session::get("SSP_OptionFiles") : array();
+		$files = $_SESSION['SSP_OptionFiles'];
 		
 		// Loop through all the options chosen on the order form, and put them into the new project
 		foreach($this->SelectedOptions() as $opt) {
@@ -968,8 +970,9 @@ $AuthNet = self::build_auth_net($data);
 		$p->write();
 		
 		// Clear out all the session data in case another order is placed
-		Session::set("SSP_Options",null);
-		Session::set("SSP_OptionFiles",null);
+		$_SESSION['SSP_Options'] = null;
+		$_SESSION['SSP_OptionFiles'] = null;
+
 		
 		// Notify the client and the admin
 		SiteSprocketMailer::send_new_project($p);
