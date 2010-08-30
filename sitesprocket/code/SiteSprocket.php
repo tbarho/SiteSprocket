@@ -545,7 +545,7 @@ class SiteSprocket_Controller extends Page_Controller implements PermissionProvi
 							if($o->UploadText) {
 								$fields->push(new LiteralField('upl'.$o->ID, "<p class='upload-text'>".$o->UploadText."</p>"));
 							}
-							$f->setVar('fileExt', '*.jpg;*.gif;*.png;*.psd;*.zip;*.gz');
+							$f->sitesprocketFiles();
 							$f->setVar('hideButton', 'true'); // TB
 							$f->setVar('wmode', 'transparent'); // TB
 							$f->setVar('width','205'); // TB
