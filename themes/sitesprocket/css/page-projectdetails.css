@@ -66,24 +66,6 @@
 }
 
 
-.order, .uploads {
-	list-style: none;
-}
-
-.order {
-	margin: 10px 0 10px 20px;
-	padding: 0;
-	width: 325px;
-}
-
-.order li {
-	font-size: 14px;
-	font-weight: bold;
-	border-bottom: solid 1px #D9BD7F;
-	padding-bottom: 15px;
-	margin-top: 15px;
-}
-
 /* Uploads */
 
 .uploads {
@@ -114,12 +96,14 @@
 }
 
 .payment a {
-	padding: 5px 10px;
+	padding: 5px 10px 3px;
 	color: #fff;
-	background: #55aaea;
-	font-size: 16px;
+	height: 25px;
+	background: url('../images/pay-bg.gif') repeat-x 0 0;
+	font-size: 14px;
 	font-weight: bold;
 	text-decoration: none;
+	border: solid 1px #448700;
 	/*
 border-top: solid 1px #a2d7fe;
 	border-left: solid 1px #a2d7fe;
@@ -129,7 +113,7 @@ border-top: solid 1px #a2d7fe;
 }
 
 .payment a:hover {
-	background: #003865;
+	background: #709500;
 }
 
 
@@ -171,6 +155,10 @@ border-top: solid 1px #a2d7fe;
 	color: #003865;
 }
 
+.message form {
+	margin-top: 10px;
+}
+
 #MessageText textarea {
 	height: 130px;
 	max-width: 610px;
@@ -196,6 +184,90 @@ border-top: solid 1px #a2d7fe;
 
 #Form_CreateMessageForm_action_doCreateMessage {
 	background: url('../images/post-message.png') no-repeat 0 0;
+}
+
+/* Inital Message / Order */
+
+.options {
+	border: dashed 1px #b29559;
+	padding: 15px;
+	margin-bottom: 20px;
+	background: #e7d5b0;
+}
+
+.option {
+}
+
+.option .title {
+	color: #003865;
+	font-size: 14px;
+	font-weight: bold;
+	font-style: normal;
+	margin-left: 10px;
+	margin-bottom: 0;
+}
+
+.option .title span {
+	float: right;
+}
+
+.description {
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+.description p {
+	margin: 0;
+}
+
+.order {
+}
+
+.description ul {
+	margin: 5px 0 5px 10px;
+	padding: 0;
+}
+
+.description li {
+	list-style: none;
+	margin:0;
+	padding:0;
+	font-style: italic;
+}
+
+.payment-info {
+	border: solid 1px #448700;
+	background: #d8e9a6;
+	color: #448700;
+	padding: 10px;
+}
+
+.uploads {
+	padding: 10px;
+	list-style: none;
+	margin: 20px 0 10px 10px;
+	overflow: auto;
+}
+
+.uploads li {
+	background: url(../images/page_add.png) no-repeat 0 0;
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	margin-left: 15px;
+	padding: 0 0 5px 20px;
+	color: #003865;
+}
+
+.uploads li a {
+	text-decoration: none;
+	font-style: normal;
+	font-weight: normal;
+	float: right;
+}
+
+.uploads li a:hover {
+	text-decoration: underline;
 }
 
 
