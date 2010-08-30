@@ -1,18 +1,27 @@
-<h3><% _t('SSP.ORDERDETAILS','Order details') %></h3>
-<% control SelectedOptions %>
-	<div>
-		<% control Option %>
-			$Title ($Price.Nice)<br />
-		<% end_control %>
-		<% if Attachments %>
-			<% control Attachments %>
-				<img src="$Icon" alt="" /> <a href="$URL">[$Name <% _t('SSP.ATTACHED','attached') %>]</a><br />
+<div class="order">
+	<h3><% _t('SSP.ORDERDETAILS','Initial Order details') %></h3>
+	<% control SelectedOptions %>
+	<div class="options">
+		<div class="option">
+			<% control Option %>
+			<div class="title">$Title ($Price.Nice)</div>
 			<% end_control %>
-		<% end_if %>
+			<% if Attachments %>
+			<ul class="uploads">
+				<% control Attachments %>
+				<li>$Name <% _t('SSP.ATTACHED','attached') %> (<a href="$URL">download</a>)</li>
+				<% end_control %>
+			</ul>
+			<% end_if %>
+		</div>
 	</div>
-<% end_control %>
-<% if Notes %>
-	<h3><% _t('SSP.NOTES','Notes') %></h3>
-	<div>$Notes</div>
-<% end_if %>
-<div>Total paid by credit card: $TotalCost.Nice</div>
+	<% end_control %>
+	<div class="payment-info">Total paid by credit card: $TotalCost.Nice</div>
+	<% if Notes %>
+	<div class="notes">
+		<h3><% _t('SSP.NOTES','Notes') %></h3>
+		<p>$Notes</p>
+	</div>
+	<% end_if %>
+</div>
+
