@@ -23,6 +23,11 @@ class SiteSprocket extends Page
 		return $f;
 	}
 	
+	public onBeforeDelete() {
+		parent::onBeforeDelete();
+		$this->ProductGroups()->removeAll();
+	}
+	
 
 }
 
