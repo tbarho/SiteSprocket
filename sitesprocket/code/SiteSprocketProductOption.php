@@ -12,7 +12,7 @@ class SiteSprocketProductOption extends DataObject
 {
 	static $db = array (
 		'Title' => 'Varchar',
-		'Description' => 'Text',
+		'Description' => 'HTMLText',
 		'Price' => 'Currency',
 		'AllowUploads' => 'Boolean',
 		'UploadText' => 'Text'
