@@ -16,7 +16,7 @@
 										<% if Attachments %>
 										<ul class="uploads">
 											<% control Attachments %>
-											<li><em>$Name</em> <% _t('SSP.ATTACHED','uploaded') %> (<a href="$URL">download</a>)</li>
+											<li><em>$Name</em> <% _t('SSP.ATTACHED','uploaded') %> <a href="$URL">&laquo; download</a></li>
 											<% end_control %>
 										</ul>
 										<% end_if %>
