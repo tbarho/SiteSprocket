@@ -18,7 +18,7 @@ class SiteSprocket extends Page
 	public function getCMSFields() {
 		$f = parent::getCMSFields();
 		$f->addFieldToTab("Root.Content.Product Options", new DataObjectManager($this, 'ProductOptions','SiteSprocketProductOption'));
-		$f->addFieldToTab("Root.Content.Product G", new DataObjectManager($this, 'ProductGroups','SiteSprocketProductGroup'));
+		$f->addFieldToTab("Root.Content.Product Groups", new DataObjectManager($this, 'ProductGroups','SiteSprocketProductGroup'));
 		$f->addFieldToTab("Root.Content.On Submit", new HtmlEditorField('OnSubmit', _t('SSP.ONSUBMIT','On submit text')));
 		return $f;
 	}
