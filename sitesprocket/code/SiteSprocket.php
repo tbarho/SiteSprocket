@@ -722,26 +722,29 @@ class SiteSprocket_Controller extends Page_Controller implements PermissionProvi
 			$this,
 			"ProfileForm",
 			new FieldSet (
+				new LiteralField('','<div class="left"'),
 				new HeaderField(
 					$title = _t('SSP.LOGINCREDS','You can change your email and password. Your new credentials will be used to log you in.'),
 					$headingLevel = 3
 				),
 				new EmailField('Email', _t('SSP.EMAIL','Email')),
-				new PasswordField('Password', _t('SSP.PASSWORD','Choose a password')),
-				new PasswordField('PasswordConfirm', _t('SSP.CONFIRMPASSWORD','Confirm password')),
-
+				new PasswordField('Password', _t('SSP.PASSWORD','Password')),
+				new PasswordField('PasswordConfirm', _t('SSP.CONFIRMPASSWORD','Confirm')),
+				new LiteralField('','</div><div class="right">'),
 				new HeaderField(
 					$title = _t('SSP.INVOICESANDRECEIPTS','This information will be used to generate invoices and receipts.'),
 					$headingLevel = 3
-				),				
+				),
+				new TextField('FirstName', _t('SSP.FIRSTNAME','First Name')),
+				new TextField('Surname', _t('SSP.LASTNAME','Last Name')),				
 				new TextField('Company', _t('SSP.COMPANY','Company')),
-				new TextField('FirstName', _t('SSP.FIRSTNAME','First name')),
-				new TextField('Surname', _t('SSP.LASTNAME','Last name')),
 				new TextField('Address', _t('SSP.ADDRESS','Address')),
+				new TextField('City', _t('SSP.CITY','City')),
 				$d = new StateDropdownField('State', _t('SSP.STATE','State')),
-				new TextField('Zip', _t('SSP.ZIPCODE','Zip')),
 				new CountryDropdownField('Country', _t('SSP.COUNTRY','Country')),
-				new TextField('Phone', _t('SSP.PHONE','Phone number'))
+				new TextField('Zip', _t('SSP.ZIPCODE','Zip')),
+				new TextField('Phone', _t('SSP.PHONE','Phone')),
+				new LiteralField('','</div>')
 			),				
 			new FieldSet (
 				new FormAction('doProfileSave', _t('SSP.SAVEPROFILE','Save profile'))
