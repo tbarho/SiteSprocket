@@ -158,6 +158,24 @@ table.project_results {
 	font-weight: bold;
 }
 
+.project_message .option {
+	border: dashed 1px #666;
+	margin-top: 10px;
+	padding: 10px;
+	background: #ccc;
+}
+
+#project .project_message .title, #project .project_message .title span {
+	background: none;
+	font-size: 14px;
+	font-weight: bold;
+	border: none;
+}
+
+#project .project_message .title span {
+	float: right;
+}
+
 .payment-option {
 	background: #ccdef3;
 	border: solid 1px #acbbcc;
@@ -240,7 +258,7 @@ table.project_results {
 	font-size: 12px;
 }
 
-#add_message .uploadify-filename {
+#add_message .uploadify-filename, #project .uploads li {
 	background: url(/sitesprocket/images/page_add.png) no-repeat 0 5px;
 	font-size: 12px;
 	font-style: italic;
@@ -250,6 +268,8 @@ table.project_results {
 	padding-left: 20px;
 	color: #003865;
 }
+
+
 
 
 #add_message .uploadifyQueue {
