@@ -8,8 +8,8 @@ $databaseConfig = array(
 	"type" => 'MySQLDatabase',
 	"server" => 'localhost', 
 	"username" => 'root', 
-	"password" => 'root', 
-	"database" => 'sitesprocket24',
+	"password" => 'Redrooster8', 
+	"database" => 'sitesprocket_live',
 	"path" => '',
 );
 
