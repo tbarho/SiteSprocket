@@ -15,3 +15,5 @@ UploadifyField::set_var('file_class','SiteSprocketFile');
 UploadifyField::set_var('image_class','SiteSprocketFile');
 
 S3File::set_auth(SiteSprocketConfig::S3_ACCESS_KEY, SiteSprocketConfig::S3_SECRET_KEY);
+
+SortableDataObject::add_sortable_classes(array('SiteSprocketProductGroup','SiteSprocketProductOption'));
