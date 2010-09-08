@@ -3,7 +3,7 @@
 
 .form-content {
 	float: left;
-	width: 510px;
+	width: 590px;
 }
 
 .form-content h2, .cart h2 {
@@ -14,25 +14,22 @@
 
 .section {
 	margin: 10px 0 45px;
-	padding: 0 20px 22px;
-	border: solid 1px #dadada;
-	
 }
 
 .section h3 {
-	background: #fff;
-	color: #6c6c6c;
-	float: left;
-	margin: -15px 0 10px;
-	padding: 0 10px;
+	color: #72a900;
+	border: dashed 1px #72a900;
 	font-size: 20px;
+	padding: 5px;
+	margin-bottom: 15px;
+	background: #d8e986;
 }
 
 .product {
-	border: solid 1px #b7b7b7;
-	background: #f4f4f4;
-	margin-top: 22px;
+	border: solid 1px #fff;
+	background: #fff;
 	padding: 10px;
+	margin: 5px 0 20px;
 }
 
 .selected {
@@ -52,9 +49,12 @@
 	color: #003865;
 }
 
+
 #main .product p.field {
 	margin: 0;
 	padding: 0;
+	border-bottom: dashed 1px;
+	padding-bottom: 4px;
 }
 
 .description {
@@ -63,7 +63,7 @@
 }
 
 .product .description p {
-	margin: 0 0 10px 0;
+	margin: 5px 0 10px 0;
 }
 
 
@@ -86,13 +86,13 @@
 
 .cart {
 	float: right;
-	width: 386px;
+	width: 300px;
 	padding-left: 40px;
 }
 
 #price-info {
 	position: relative;
-	width: 386px;
+	width: 300px;
 	top: 0;
 	left: 0;
 	
@@ -126,7 +126,7 @@
 }
 
 .cart table td.price, .cart table th.price {
-	width: 120px;
+	width: 90px;
 }
 
 .cart table td.price {
