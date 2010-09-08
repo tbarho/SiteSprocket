@@ -99,7 +99,7 @@ div.field {
 /* Validation Error Styles */
 
 span.message {
-	background: none repeat scroll 0% 0% rgb(255, 215, 215); 
+	background: #ffd7d7; 
 	float: right;  
 	clear: left; 
 	padding: 8px 10px; 
@@ -110,8 +110,24 @@ span.message {
 	color: #793535;
 }
 
+p.message {
+	background: #ffd7d7;
+	border: solid 1px #E5A3A3;
+	color: #793535;
+	padding: 5px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
 
 /* Uploadify Styles */
+.upload-text {
+	color: #2377B9;
+	margin-bottom: 15px;
+	font-size: 12px;
+	font-style: italic;
+	padding: 0 30px;
+}
 
 .upload-container {
 	padding-left: 24px;
@@ -120,6 +136,7 @@ span.message {
 
 .uploadify-field {
 	background: url('../images/add-files.png') no-repeat top left;
+	margin-left: 27px;
 }
 
 .uploadify-field object {
