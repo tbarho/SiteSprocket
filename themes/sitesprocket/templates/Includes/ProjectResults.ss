@@ -1,5 +1,4 @@
 					<div class="paging">  
-						$PerPageDropdown
 						<% if PrevLink %>
 							<a href="$PrevLink" title="<% _t('SSPAdmin.PREVIOUS','Previous') %>"><% _t('SSPAdmin.PREVIOUS','Previous') %></a>
 						<% end_if %>
