@@ -553,10 +553,10 @@ class SiteSprocket_Controller extends Page_Controller implements PermissionProvi
 						$fields->push(new CheckboxField('Option_'.$o->ID, $o->Title, in_array($o->ID, $selected)));
 						$fields->push(new LiteralField('desc'.$o->ID, "<div class='description'>".$o->Description."</div>"));
 						if($o->AllowUploads) {
-							$fields->push($f = new UploadifyField("Upload_{$o->ID}"));
 							if($o->UploadText) {
-								$fields->push(new LiteralField('upl'.$o->ID, "<p class='upload-text'>".$o->UploadText."</p>"));
+								$fields->push(new LiteralField('upl'.$o->ID, "<div class='upload-text'>".$o->UploadText."</div>"));
 							}
+							$fields->push($f = new UploadifyField("Upload_{$o->ID}"));
 							$f->sitesprocketFiles();
 							$f->setVar('hideButton', 'true'); // TB
 							$f->setVar('wmode', 'transparent'); // TB
@@ -877,7 +877,7 @@ class SiteSprocket_Controller extends Page_Controller implements PermissionProvi
 	 */
 	public function doCreateAccount($data, $form) {
 		// Make sure we have a place to store the member
-		$group = DataObject::get_one('Group', "Code = 'site-sprocket-clients'");
+		$group = DataObject::get_one('Group', "Code = 'site-sprocket'");
 		if(!$group) {
 			$form->addErrorMessage("Blurb",'Sorry, you need to set a group for clients to be added to.  Have the webmaster see the configuration file for details.', "bad");
 			Session::set("FormInfo.Form_AccountForm.data", $data);
