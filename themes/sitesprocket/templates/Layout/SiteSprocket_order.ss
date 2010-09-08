@@ -15,6 +15,11 @@
 					<h2>Select your options</h2>
 					<% control OrderForm %>
 					<form $FormAttributes>
+						<% if Message %>
+							<p id="{$FormName}_error" class="message $MessageType">$Message</p>
+						<% else %>
+							<p id="{$FormName}_error" class="message $MessageType" style="display: none"></p>
+						<% end_if %>
 						<% control Fields %>
 						$FieldHolder
 						<% end_control %>
