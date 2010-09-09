@@ -11,7 +11,8 @@
 class SiteSprocketProductGroup extends DataObject
 {
 	static $db = array (
-		'Title' => 'Varchar'
+		'Title' => 'Varchar',
+		'LimitOne' => 'Boolean'
 	);
 	
 	static $has_many = array (
@@ -40,8 +41,17 @@ class SiteSprocketProductGroup extends DataObject
 	
 	public function getCMSFields() {
 		return new FieldSet (
-			new TextField('Title', _t('SSP.GROUPNAME','Name'))
+			new TextField('Title', _t('SSP.GROUPNAME','Name')),
+			new CheckboxField('LimitOne', _t('SSP.GROUPLIMIT', 'Allow only one option?'))
 		);
+	}
+	
+	public function LimitOne() {
+		if($this->LimitOne) {
+			return " limit-one";
+		}
+		
+		return false;
 	}
 	
 	
