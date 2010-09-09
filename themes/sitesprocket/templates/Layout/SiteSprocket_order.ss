@@ -1,4 +1,5 @@
 			<% require themedCSS(page-order) %>
+			<% require javascript(http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js) %>
 			<% require javascript(sprocketOrderPage/js/page-order/cart-mover.js) %>
 			<% require javascript(sprocketOrderPage/js/page-order/check-change.js) %>
 
