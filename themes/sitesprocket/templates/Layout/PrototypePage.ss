@@ -9,7 +9,7 @@
 							<li><a href="#">Examples</a></li>
 							<li><a href="#">Videos</a></li>
 							<li><a href="#">Pricing</a></li>
-							<li class="order"><a href="/order">Order</a></li>
+							<li class="order"><a href="/clients/order">Order</a></li>
 						</ul>
 					</div>
 				</div>
