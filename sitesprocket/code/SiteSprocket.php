@@ -544,7 +544,7 @@ class SiteSprocket_Controller extends Page_Controller implements PermissionProvi
 		$fields = new FieldSet();
 		if($groups = $this->ProductGroups()) {
 			foreach($groups as $g) {
-				$fields->push(new LiteralField('','<div class="section">'));  // TB
+				$fields->push(new LiteralField('','<div class="section'.$g->LimitOne().'">'));  // TB
 				$fields->push(new HeaderField($title = $g->Title, $headingLevel = 3));
 				if($opts = $g->Options()) {
 					foreach($opts as $o) {
