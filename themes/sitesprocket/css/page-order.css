@@ -43,6 +43,23 @@
 	margin-top: 0;
 }
 
+.product.disabled h4, 
+.product.disabled p.field, 
+.product.disabled p.field label,
+.product.disabled .description,
+.product.disabled .upload-text {
+	color: #bbb;
+	border-color: #bbb;
+}
+
+.product.disabled .uploadify-field {
+	visibility: hidden;
+}
+
+.uploadify-field input {
+	display: none;
+}
+
 .product .field label {
 	font-weight: bold;
 	font-size: 16px;
