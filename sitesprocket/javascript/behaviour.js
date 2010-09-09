@@ -18,37 +18,7 @@ $(function() {
 				});
 			});
 		});
-	}
-	
-	// Make an accordion out of something
-	
-	
-	// Disable on selection for "limit-one" groups
-	// TODO: Persist through session....done
-	// TODO: Make better use of code....
-	if($('#Form_OrderForm').length) {
-		$('#Form_OrderForm input:checkbox').each(function() {
-			if($(this).parents('.section').hasClass('limit-one')) {
-				if($(this).is(':checked')) {
-					$(this).parents(".product").siblings(".product").children('.field').children('input').attr('disabled', 'disabled');
-					$(this).parents(".product").siblings(".product").addClass('disabled');
-				} else { 
-					$(this).parents(".product").siblings(".product").children('.field').children('input').removeAttr('disabled');
-					$(this).parents(".product").siblings(".product").removeClass('disabled');
-				}
-				$(this).change(function() {
-					if($(this).is(':checked')) {
-						$(this).parents(".product").siblings(".product").children('.field').children('input').attr('disabled', 'disabled');
-						$(this).parents(".product").siblings(".product").addClass('disabled');
-					} else { 
-						$(this).parents(".product").siblings(".product").children('.field').children('input').removeAttr('disabled');
-						$(this).parents(".product").siblings(".product").removeClass('disabled');
-					}
-				});
-			}
-		});
-	}
-	
+	}	
 	
 	// Assign behaviours to the results table
 	if($('.project_results').length) {
