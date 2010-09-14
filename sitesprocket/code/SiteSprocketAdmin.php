@@ -725,6 +725,9 @@ class SiteSprocketAdmin extends LeftAndMain implements PermissionProvider
 			$message->ProjectID = $project->ID;
 			$message->AuthorID = Member::currentUserID();
 			$message->write();
+			$p = $message->Project();
+			$p->UnreadClient = 1;
+			$p->write();
 			if(isset($data['Attachments']) && is_array($data['Attachments'])) {
 				foreach($data['Attachments'] as $file_id) {
 					if(is_numeric($file_id)) {
