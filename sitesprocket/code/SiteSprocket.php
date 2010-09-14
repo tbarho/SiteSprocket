@@ -334,6 +334,9 @@ class SiteSprocket_Controller extends Page_Controller implements PermissionProvi
 		if($project && !$project->canEdit()) {
 
 			$project = false;
+		} elseif($project) {
+			$project->UnreadClient = 0;
+			$project->write();
 		}
 		return array (
 			'Project' => $project
