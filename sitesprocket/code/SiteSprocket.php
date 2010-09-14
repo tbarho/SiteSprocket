@@ -1085,6 +1085,9 @@ $AuthNet = self::build_auth_net($data);
 			$message->ProjectID = $project->ID;
 			$message->AuthorID = Member::currentUserID();
 			$message->write();
+			$p = $message->Project();
+			$p->UnreadAdmin = 1;
+			$p->write();
 			if(isset($data['Attachments']) && is_array($data['Attachments'])) {
 				foreach($data['Attachments'] as $file_id) {
 					if($file = DataObject::get_by_id("SiteSprocketFile", $file_id)) {
