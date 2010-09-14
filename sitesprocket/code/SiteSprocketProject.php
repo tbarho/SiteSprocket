@@ -14,7 +14,9 @@ class SiteSprocketProject extends DataObject {
 		'Status' => "Enum('Open,Closed','Open')",
 		'Title' => 'Text',
 		'Notes' => 'Text',
-		'AuthNetApprovalCode' => 'Varchar'
+		'AuthNetApprovalCode' => 'Varchar',
+		'UnreadClient' => 'Boolean',
+		'UnreadAdmin' => 'Boolean'
 	);
 	
 	static $has_one = array (
