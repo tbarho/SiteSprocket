@@ -367,6 +367,8 @@ class SiteSprocketAdmin extends LeftAndMain implements PermissionProvider
 			if($p = DataObject::get_by_id("SiteSprocketProject", $this->urlParams['ID'])) {
 				if($p->canEdit()) {
 					$this->Project = $p;
+					$this->Project->UnreadAdmin = 0;
+					$this->Project->write();
 				}
 			}
 		}
