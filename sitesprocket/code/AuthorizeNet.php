@@ -127,6 +127,11 @@ class AuthorizeNet {
 	public function transmit_data() {
 		$ch =  curl_init();
 		
+		// Override SSL check for curl - test mode only
+		if($this->TEST_MODE) {
+			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+		}
+		
 		curl_setopt($ch, CURLOPT_URL,$this->AUTHORIZE_LINK_URL); 
 		curl_setopt($ch, CURLOPT_HEADER, 0);
 		curl_setopt ($ch, CURLOPT_POSTFIELDS, $this->AUTHORIZE_NET_DATA_S);  
