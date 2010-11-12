@@ -8,7 +8,7 @@ $databaseConfig = array(
 	"type" => 'MySQLDatabase',
 	"server" => 'localhost', 
 	"username" => 'root', 
-	"password" => 'Redrooster8', 
+	"password" => 'root', 
 	"database" => 'sitesprocket24',
 	"path" => '',
 );
@@ -34,3 +34,6 @@ Director::set_environment_type('dev');
 
 // Temporary fix for Cookie Issue
 Cookie::set_report_errors(false);
+
+// Set default Login
+Security::setDefaultAdmin('admin','pass');
