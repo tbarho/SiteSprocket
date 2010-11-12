@@ -8,7 +8,7 @@ $databaseConfig = array(
 	"type" => 'MySQLDatabase',
 	"server" => 'localhost', 
 	"username" => 'root', 
-	"password" => 'root', 
+	"password" => 'Redrooster8', 
 	"database" => 'sitesprocket24',
 	"path" => '',
 );
