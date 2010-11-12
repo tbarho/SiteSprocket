@@ -924,10 +924,8 @@ class SiteSprocket_Controller extends Page_Controller implements PermissionProvi
 	public function doPayment($data, $form) {
 		
 		
-		/****  Commented Out For Dev Server ****/
 		
-		/*
-$AuthNet = self::build_auth_net($data);
+		$AuthNet = self::build_auth_net($data);
 		$AuthNet->AMOUNT = $this->Total();
 		$AuthNet->init();
 		$AuthNet->authorize_exec();
@@ -941,17 +939,14 @@ $AuthNet = self::build_auth_net($data);
 		
 		// Success. Save a message to the database
 		AuthNetLog::log_success($AuthNet->getResponse());
-*/
 		
-		
-		/****  Commented Out For Dev Server ****/
-		
-		
+				
 		$m = Member::currentUser();
+		
 		
 		// Create the new project
 		$p = new SiteSprocketProject();
-		//$p->AuthNetApprovalCode = $AuthNet->getApprovalCode();
+		$p->AuthNetApprovalCode = $AuthNet->getApprovalCode();
 		$p->write();
 		$p->CreatorID = Member::currentUserID();
 		$files = $_SESSION['SSP_OptionFiles'];
