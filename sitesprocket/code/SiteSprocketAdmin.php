@@ -541,7 +541,9 @@ class SiteSprocketAdmin extends LeftAndMain implements PermissionProvider
 						'EditLink' => $record->EditLink(),
 						'Value' => $value,
 						'Title' => $record->Title, // TB
-						'LastEdited' => date('d-M-Y g:ia', strtotime($record->LastEdited)) // TB
+						'LastEdited' => date('d-M-Y g:ia', strtotime($record->LastEdited)),
+						'UnreadAdmin' => $record->UnreadAdmin,
+						'UnreadClient' => $record->UnreadClient
 					)));
 				}
 				$ret->push($record);
