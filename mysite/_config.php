@@ -36,4 +36,4 @@ Director::set_environment_type('dev');
 Cookie::set_report_errors(false);
 
 // Set default Login
-Security::setDefaultAdmin('admin','pass');
+//Security::setDefaultAdmin('admin','pass');
