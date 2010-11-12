@@ -15,6 +15,13 @@ class AuthNetLog extends DataObject {
 		'Message' => 'Text'
 	);
 	
+	static $summary_fields = array(
+		'Status',
+		'Code',
+		'User',
+		'Message'
+	);
+	
 	
 	/**
 	 * Record a message to the AuthNet log table
