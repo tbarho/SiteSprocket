@@ -880,7 +880,7 @@ class SiteSprocket_Controller extends Page_Controller implements PermissionProvi
 	 */
 	public function doCreateAccount($data, $form) {
 		// Make sure we have a place to store the member
-		$group = DataObject::get_one('Group', "Code = 'site-sprocket'");
+		$group = DataObject::get_one('Group', "Code = 'sitesprocket-clients'");
 		if(!$group) {
 			$form->addErrorMessage("Blurb",'Sorry, you need to set a group for clients to be added to.  Have the webmaster see the configuration file for details.', "bad");
 			Session::set("FormInfo.Form_AccountForm.data", $data);
