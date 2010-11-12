@@ -180,7 +180,7 @@ class SiteSprocket_Controller extends Page_Controller implements PermissionProvi
 		AuthNetLog::log_error($auth->getResponse(), $error_code);
 		
 		// Notify the admin
-		SiteSprocketMailer::notify_payment_failed(Member::currentUser(), $error_code);
+		SiteSprocketMailer::send_payment_failed(Member::currentUser(), $error_code);
 		
 		Session::set("FormInfo.".$form->FormName().".data", $data);			
 		return Director::redirectBack();		
