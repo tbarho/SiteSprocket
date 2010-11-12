@@ -21,7 +21,7 @@ abstract class SiteSprocketConfig
 	 /**
 	  * @const string The "from" address for all emails
 	  */ 
-	 const EMAIL_FROM_ADDRESS = "SiteSprocket <ty@sitesprocket.com>";
+	 const EMAIL_FROM_ADDRESS = "SiteSprocket <orders@sitesprocket.com>";
 	 
 	 const ORDERS_EMAIL_ADDRESS = "ty@sitesprocket.com";
 	 
