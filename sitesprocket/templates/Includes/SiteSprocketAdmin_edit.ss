@@ -4,7 +4,7 @@ $SearchForm
 		<div><a rel="right" href="$Link(results)"><% _t('SSPAdmin.BACK','Back') %></a></div>
 		<div class="project-left">
 			<% control Project %>
-				<h2>$Title</h2>
+				<h2>Project $ID - $Title</h2>
 				<div id="messages">
 					<% include Messages %>
 				</div>
@@ -25,7 +25,7 @@ $SearchForm
 			</div>
 			<% if Project.OtherProjects %>
 				<div class="other-projects">
-				<h3><% _t('SSPAdmin.OTHERPROJECTS','Other projects for this user') %></h3>
+				<h3><% _t('SSPAdmin.OTHERPROJECTS','Other projects for this user:') %></h3>
 				<% control Project %>
 					<ul>
 					<% control OtherProjects %>
@@ -35,6 +35,10 @@ $SearchForm
 				<% end_control %>
 				</div>
 			<% end_if %>
+			<div class="project-actions">
+				<h3>Project Actions:</h3>
+				$BuildProjectButton
+			</div>
 		</div>
 		<div style="clear:both;"></div>
 		<div id="add_message">
