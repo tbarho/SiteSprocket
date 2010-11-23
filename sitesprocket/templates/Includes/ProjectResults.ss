@@ -9,7 +9,7 @@
 	<% control ProjectResults %>
 		<tr>
 			<% control Fields %>
-				<td><a href="$EditLink" rel="right">$Value</a></td>
+				<td><a href="$EditLink" rel="right"<% if UnreadAdmin %> class="unread"<% end_if %>>$Value</a></td>
 			<% end_control %>
 		</tr>
 	<% end_control %>
