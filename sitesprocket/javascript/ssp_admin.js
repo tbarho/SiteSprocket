@@ -39,6 +39,22 @@ $(function() {
 		);
 	});
 	
+	
+	
+	// Build Project
+	$('#BuildProject').live("click", function() {
+		$.post(
+			link+'buildproject',
+			{
+				id : $('#project').metadata().id
+			},
+			function(data) {
+				$('#update_message').text(data);
+				$('#update_message').fadeIn();
+			}
+		);
+	});
+		
 	// ajaxform can't handle file inputs!
 	$('input[type=file]').livequery(function() {
 		$(this).each(function() {
