@@ -362,7 +362,6 @@ class SiteSprocket_Controller extends Page_Controller implements PermissionProvi
 		);
 	}
 	
-	
 	/**
 	 * Update the sort on the table of projects. Hands off to {@see SiteSprocketAdmin}
 	 *
