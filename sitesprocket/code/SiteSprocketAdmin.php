@@ -784,7 +784,7 @@ class SiteSprocketAdmin extends LeftAndMain implements PermissionProvider
 		if(!file_exists($scriptPath)) {
 			// we send back a success code for Bash failure, because the web request succeeded, the bash script failed
 			// would be better to send back a 500, but I can't seem to get jQuery's .ajaxError() working in ssp_admin.js
-			return new SS_HTTPResponse(sprintf('%s', 'SCRIPT NOT FOUND'),200);
+			return new SS_HTTPResponse(sprintf('%s', 'SCRIPT NOT FOUND'),500);
 		}
 		
 		// Sanitize the script path
