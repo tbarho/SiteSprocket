@@ -41,8 +41,16 @@ $(function() {
 	
 	
 	
+	
 	// Build Project
 	$('#BuildProject').live("click", function() {
+		// handle a 500 error
+		$(this).ajaxError(function(e, xhr, settings, exception) {
+			$('#update_message').text(xhr.responseText);
+			$('#update_message').addClass('bad');
+			$('#update_message').fadeIn();
+		});
+		// handle the post
 		$.post(
 			link+'buildproject',
 			{
