@@ -20,6 +20,9 @@ class SiteSprocketMember extends DataObjectDecorator
 			),
 			'has_one' => array (
 				'Avatar' => 'Image'
+			),
+			'has_many' => array (
+				'Subscriptions' => 'SiteSprocketSubscription'
 			)
 		);
 	}
