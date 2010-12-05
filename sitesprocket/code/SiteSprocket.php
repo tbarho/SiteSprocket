@@ -921,9 +921,7 @@ class SiteSprocket_Controller extends Page_Controller implements PermissionProvi
 	 * @return SSViewer
 	 */
 	public function doPayment($data, $form) {
-		
-		
-		
+
 		$AuthNet = self::build_auth_net($data);
 		$AuthNet->AMOUNT = $this->Total();
 		$AuthNet->init();
@@ -938,10 +936,7 @@ class SiteSprocket_Controller extends Page_Controller implements PermissionProvi
 		
 		// Success. Save a message to the database
 		AuthNetLog::log_success($AuthNet->getResponse());
-		
-				
 		$m = Member::currentUser();
-		
 		
 		// Create the new project
 		$p = new SiteSprocketProject();
@@ -952,6 +947,30 @@ class SiteSprocket_Controller extends Page_Controller implements PermissionProvi
 		
 		// Loop through all the options chosen on the order form, and put them into the new project
 		foreach($this->SelectedOptions() as $opt) {
+			if($opt->IsRecurring) {
+				$arb = new ARBPayment(SiteSprocketConfig::AUTH_NET_LOGIN, SiteSprocketConfig::AUTH_NET_KEY);
+				$arb->name = $opt->Title;
+				$arb->amount = $opt->Price;
+				$arb->length = $opt->RecurringLength;
+				$arb->unit = $opt->RecurringUnit;
+				$arb->startDate = $opt->RecurringStart;
+				$arb->totalOccurrences = "9999";
+				$arb->cardNumber = $AuthNet->CARDNUM;
+				$arb->expirationDate = $AuthNet->EXPIRATION;
+				$arb->firstName = $AuthNet->F_NAME;
+				$arb->lastName = $AuthNet->L_NAME;
+				if($result = $arb->submit()) {
+					list ($refId, $resultCode, $code, $text, $subscriptionID) = $result;
+					AuthNetLog::log_success($text,$resultCode);
+
+					$subscription = new SiteSprocketSubscription();
+					$subscription->MemberID = Member::currentUserID();
+					$subscription->SubscriptionNumber = $subscriptionID;
+					$subscription->OptionID = $opt->ID;
+					$subscription->write();
+				}
+				
+			}
 			$selected = new SiteSprocketSelectedOption();
 			$selected->ProjectID = $p->ID;
 			$selected->OptionID = $opt->ID;
