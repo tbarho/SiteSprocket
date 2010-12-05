@@ -15,7 +15,13 @@ class SiteSprocketProductOption extends DataObject
 		'Description' => 'HTMLText',
 		'Price' => 'Currency',
 		'AllowUploads' => 'Boolean',
-		'UploadText' => 'Text'
+		'UploadText' => 'Text',
+		'IsRecurring' => 'Boolean',
+		'RecurringStart' => 'Date',
+		'RecurringEnd' => 'Date',
+		'RecurringAmount' => 'Int',
+		'RecurringLength' => 'Int',
+		'RecurringUnit' => "Enum('months,days')"
 	);
 	
 	static $has_one = array (
@@ -70,7 +76,17 @@ class SiteSprocketProductOption extends DataObject
 			new TextareaField('Description', _t('SSP.OPTIONDESCRIPTION','Description')),
 			new CurrencyField('Price', _t('SSP.OPTIONPRICE','Price')),
 			new CheckboxField('AllowUploads', _t('SSP.ALLOWUPLOADS','Allow uploads')),
-			new TextareaField('UploadText', _t('SSP.UPLOADTEXT','Upload text'))
+			new TextareaField('UploadText', _t('SSP.UPLOADTEXT','Upload text')),
+			new CheckboxField('IsRecurring', _t('SSP.ISRECURRING','Recurring?')),
+			new DatePickerField('RecurringStart', _t('SSP.RECURRINGSTART','Start of recurring billing')),
+			new DatePickerField('RecurringEnd', _t('SSP.RECURRINGEND','End of recurring billing')),
+			new FieldGroup(
+				new LiteralField('bill', _t('SSP.BILLTHECARD','Bill the card $')),
+				new NumericField('RecurringAmount',''),
+				new LiteralField('every',_t('SSP.EVERY','every')),
+				new NumericField('RecurringLength',''),
+				new DropdownField('RecurringUnit','', $this->dbObject('RecurringUnit')->enumValues())
+			)
 		);
 		$d->setEmptyString(_t('SSP.CHOOSEGROUP','-- Please select a group --'));
 		return $f;
