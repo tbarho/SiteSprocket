@@ -73,7 +73,14 @@ class SiteSprocket_Controller extends Page_Controller implements PermissionProvi
 		'prevpage',
 		'invoice',
 		'optionpayment',
-		'OptionPaymentForm'
+		'OptionPaymentForm',
+		'subscriptions',
+		'viewsubscription',
+		'updatesubscription',
+		'UpdateSubscriptionForm',
+		'doUpdateSubscription',
+		'cancelsubscription',
+		'CancelSubscriptionConfirmForm'
 	);
 	
 	
@@ -318,6 +325,97 @@ class SiteSprocket_Controller extends Page_Controller implements PermissionProvi
 			return $this->requireLogin();
 		}	
 		return array();
+	}
+	
+	/**
+	 * Returns the view of the current member's subscriptions.
+	 *
+	 * @return SSViewer
+	 */
+	public function subscriptions() {
+		if(!$this->checkMember()) {
+			return $this->requireLogin();
+		}
+		
+		/* XXX
+		if($subscriptions = $this->getSubscriptionsByUser(Member::CurrentUser())) {
+			return array('Subscriptions' => $subscriptions);
+		}
+		
+		return array('Subscriptions' => 'You have no subscriptions');
+		*/
+		
+		return array();
+		
+	}
+	
+	/**
+	 * Returns the View view of the selected subscription.
+	 *
+	 * @return SSViewer
+	 */
+	 public function viewsubscription() {
+		if(!$this->checkMember()) {
+			return $this->requireLogin();
+		}
+		
+		
+		/* XXX
+		if($id = $this->cleanID()) {
+			if($subscription = $this->getSubscription($id)) {
+				return array('Subscription' => $subscription);
+			}
+		}
+		
+		return array('Subscription' => 'There was a problem loading your subscription!');
+		*/
+		
+		return array();
+
+	 }
+	 
+	/**
+	 * Returns the Update view of the selected subscription.
+	 *
+	 * @return SSViewer
+	 */
+	 public function updatesubscription() {
+		if(!$this->checkMember()) {
+			return $this->requireLogin();
+		}		
+		return array();
+
+	 }
+	 
+	 /**
+	 * Returns the Update view of the selected subscription.
+	 *
+	 * @return SSViewer
+	 */
+	 public function cancelsubscription() {
+		if(!$this->checkMember()) {
+			return $this->requireLogin();
+		}		
+		return array();
+
+	 }
+	
+	/**
+	 * Returns the current member's subscriptions.
+	 *
+	 * @return DataObjectSet or Array
+	 */
+	public function getSubscriptionsByUser($userId) {
+		
+	}
+	
+	/**
+	 * Returns one subscription based on Subscription ID
+	 *
+	 * @return Subscription
+	 */
+	public function getSubscription($id) {
+		
 	}
 	
 	
@@ -789,6 +887,99 @@ class SiteSprocket_Controller extends Page_Controller implements PermissionProvi
 		}
 	}
 	
+	
+	/**
+	 * Creates the form for updating a subscription
+	 *
+	 * @return Form
+	 */
+	 public function UpdateSubscriptionForm() {
+	 	/* XXX
+	 	if($id = $this->cleanID()) {
+	 		if($subscription = $this->getSubscription($id)) {
+	 			
+	 		}
+	 	}
+	 	*/
+	 	
+	 	/* XXX
+	 	
+	 	Returning the form no matter what, for testing.  See above code for checking for a sane URL ID param.
+	 	
+	 	 */  
+	 	
+	 	$year_map = array();
+		$year = date('Y');
+		for($i = 0;$i < SiteSprocketConfig::EXP_YEAR_RANGE; $i++) {
+			$year_map[$year+$i] = $year+$i;
+		}
+		
+		$m = Member::currentUser();
+		
+	 	$fields = new FieldSet (
+					new CreditCardField('CardNumber', _t('SSP.CARDNUMBER','Card number')),
+					new LiteralField('CardType', '<div id="CardType" class="field optionset"><ul><li class="visa">Visa</li><li class="mc">Master Card</li><li class="ae">American Express</li><li class="disc">Discover</li></ul></div>'),
+					new DropdownField('ExpMonth', _t('SSP.EXPMONTH','Exp. Date'), array_combine(range("01","12"), range("01","12"))),
+					new DropdownField('ExpYear', _t('SSP.EXPMONTH','/'), $year_map),
+					new NumericField('CCV', _t('SSP.CCV','CCV')),
+					new LiteralField('ccv-dialog', '<div id="ccv-dialog">How to find a CCV</div>'),
+					new HeaderField($title = _t('SSP.BILLINGHEADER','Billing information'), $headingLevel = 3),
+					new LiteralField('address_block', '<div>'.implode('<br />', array (
+						$m->getName(),
+						$m->Address,
+						$m->City . ", " . $m->State . " " . $m->Zip,
+						$m->Country,
+						$m->Phone
+					)).'</div>'),
+					new CheckboxField('CustomAddress', _t('SSP.USEPROFILEADDRESS','Use a different address')),
+					new LiteralField('open_custom_address','<div class="custom_address">'),
+					new TextField('FirstName', _t('SSP.FIRSTNAME','First name')),
+					new TextField('Surname', _t('SSP.LASTNAME','Last name')),
+					new TextField('Address', _t('SSP.ADDRESS','Address')),
+					new TextField('City', _t('SSP.CITY','City')),
+					$d = new StateDropdownField('State', _t('SSP.STATE','State')),
+					new CountryDropdownField('Country', _t('SSP.COUNTRY','Country')),
+					new TextField('Zip', _t('SSP.ZIPCODE','Zip')),
+					new TextField('Phone', _t('SSP.PHONE','Phone')),
+					new LiteralField('close_custom_address','</div>')
+					
+		);
+		$actions = new FieldSet (
+			new FormAction('doUpdateSubscription', 'Update Subscription') // XXX doUpdateSubscription does not exist
+		);
+		$required = new RequiredFields("Title","CardType","CardNumber","ExpMonth","ExpYear","CCV");
+				
+		return new Form(
+			$this,
+			'UpdateSubscriptionForm',
+			$fields,
+			$actions,
+			$required
+		);
+	 }
+	 
+	 /**
+	 * Creates the form for confing a subscription cancellation
+	 *
+	 * @return Form
+	 */
+	 public function CancelSubscriptionConfirmForm() {
+	 	$fields = new FieldSet(
+	 		new LiteralField('', 'Are you sure you want to cancel your subscription?')
+	 	);
+	 	$actions = new FieldSet(
+	 		new FormAction('doCancelSubscription', 'Yes, I want to cancel my subscription'), // XXX doCancelSubscription does not exist
+	 		new FormAction('doQuitCancelSubscription', 'No, thanks.') // XXX doQuitCancelSubscription does not exist
+	 	);
+	 	
+	 	return new Form(
+	 		$this,
+	 		'CancelSubscriptionConfirmForm',
+	 		$fields,
+	 		$actions
+	 	);
+	 }
+		
 	
 	/**
 	 * Make sure the member has the correct permissions
