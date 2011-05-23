@@ -5,7 +5,7 @@
 			<div id="gallery">
 				<div class="holder">
 					<div class="frame">
-						<h1><% sprintf(_t('SSP.OPTIONPAYMENT', 'Pay for option "%s"'),$OptionName) %></h1>
+						<h1><% sprintf(_t('SSP.OPTIONPAYMENT', 'Pay for option "%s"'),$OptionName) %> - $OptionAmount</h1>
 					</div>
 				</div>
 			</div>
