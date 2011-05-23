@@ -824,7 +824,7 @@ class SiteSprocket_Controller extends Page_Controller implements PermissionProvi
 			$this,
 			"ProfileForm",
 			new FieldSet (
-				new LiteralField('','<div class="left"'),
+				new LiteralField('','<div class="left">'),
 				new HeaderField(
 					$title = _t('SSP.LOGINCREDS','You can change your email and password. Your new credentials will be used to log you in.'),
 					$headingLevel = 3

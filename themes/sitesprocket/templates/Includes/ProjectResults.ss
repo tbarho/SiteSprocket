@@ -23,19 +23,19 @@
 								<tr<% if Even %> class="even"<% end_if %>>
 									<% control Fields %>
 										<% if Pos = 1  %>
-										<td class="first">
+										<td class="first"<% if UnreadClient %> style="font-weight: bold"<% end_if %>>
 											<a href="$EditLink">$Value - $Title &raquo;</a>
 										</td>
 										<% end_if %>
 										
 										<% if Pos = 2 %>
-										<td>
+										<td<% if UnreadClient %> style="font-weight: bold"<% end_if %>>
 											$LastEdited
 										</td>
 										<% end_if %>
 										
 										<% if Pos = 3 %>
-											<td>$Value</td>
+											<td<% if UnreadClient %> style="font-weight: bold"<% end_if %>>$Value</td>
 										<% end_if %>
 									<% end_control %>
 								</tr>

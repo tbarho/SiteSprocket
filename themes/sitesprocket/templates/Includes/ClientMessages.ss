@@ -24,7 +24,7 @@
 										<div class="payment">
 											<% control PaymentOption %>
 												<% if Paid %>
-												Added $Description for $Cost.Nice
+												<div class="payment-info">Added $Description for $Cost.Nice</div>
 												<% else %>
 												<a href="$PayLink">Add $Description for $Cost.Nice</a>
 												<% end_if %>
