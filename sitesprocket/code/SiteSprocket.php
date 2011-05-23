@@ -522,7 +522,8 @@ class SiteSprocket_Controller extends Page_Controller implements PermissionProvi
 			if($option->belongsToUser() && !$option->Paid) {
 				return array (
 					'PaymentForm' => $this->OptionPaymentForm(),
-					'OptionName' => $option->Description
+					'OptionName' => $option->Description,
+					'OptionCost' => $option->Cost
 				);
 			}
 		}
@@ -760,7 +761,7 @@ class SiteSprocket_Controller extends Page_Controller implements PermissionProvi
 				new TextField('Zip', _t('SSP.ZIPCODE','Zip')),
 				new TextField('Phone', _t('SSP.PHONE','Phone')),
 				new LiteralField('close_custom_address','</div>'),
-				new LiteralField('divider', '<div class="divider">&nbsp;</div><h2>Additional Info</h2><p>Name your project, and enter any special notes or instructions.</p>'),
+				new LiteralField('AdditionalInfo', '<div class="divider">&nbsp;</div><h2>Additional Info</h2><p>Name your project, and enter any special notes or instructions.</p>'),
 				new TextField('Title', _t('SSP.PROJECTTITLE','Project title')),
 				new TextareaField('Notes', _t('SSP.PROJECTNOTES','Notes'))		
 				
@@ -799,6 +800,7 @@ class SiteSprocket_Controller extends Page_Controller implements PermissionProvi
 			),
 			new RequiredFields("Title","CardType","CardNumber","ExpMonth","ExpYear","CCV")
 		);
+		$form->Fields()->removeByName('AdditionalInfo');
 		$form->Fields()->removeByName('Title');
 		$form->Fields()->removeByName('Notes');
 		$form->Fields()->push(new HiddenField('ID','', $option->ID));

@@ -79,3 +79,7 @@
 	clear: both;
 	margin-bottom: 0;
 }
+
+.cart table .total td {
+	border-top-width: 3px;
+}

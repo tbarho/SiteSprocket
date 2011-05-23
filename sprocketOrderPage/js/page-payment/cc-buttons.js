@@ -13,11 +13,11 @@ $('#ccv-dialog').dialog({
 
 jQuery(document).ready(function() {
 	
-	$('#Form_PaymentForm_CCV').focusin(function() {
+	$('#Form_PaymentForm_CCV, #Form_OptionPaymentForm_CCV').focusin(function() {
 		$('#ccv-dialog').fadeTo(300, 1);
 	});
 	
-	$('#Form_PaymentForm_CCV').focusout(function() {
+	$('#Form_PaymentForm_CCV, #Form_OptionPaymentForm_CCV').focusout(function() {
 		$('#ccv-dialog').fadeTo(300, 0);
 	});
 	

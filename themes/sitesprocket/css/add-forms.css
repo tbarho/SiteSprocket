@@ -374,13 +374,14 @@ input#MemberLoginForm_LoginForm_action_logout {
 
 #ccv-dialog {
 	background: url('../images/cv_card.jpg') no-repeat -294px -39px;
-	position: absolute;
-	top: 162px;
-	left: 442px;
-	width: 258px;
-	height: 220px;
-	text-indent: -9999px;
-	display: none;
+	position: relative;
+	display: block;
+	top: 0;
+	left: 450px;
+	width: 257px;
+	height: 177px;
+	text-indent: -99999px;
+	opacity: 0.0;
 }
 
 .divider {
@@ -394,8 +395,10 @@ input#MemberLoginForm_LoginForm_action_logout {
 	display: block;
 }
 
-#Form_PaymentForm_HeaderFieldBilling-information {
+#Form_PaymentForm_HeaderFieldBilling-information, #Form_OptionPaymentForm_HeaderFieldBilling-information {
 	clear: both;
+	margin-bottom: 0;
+	margin-top: -100px;
 }
 
 #Title input, #Notes textarea {
