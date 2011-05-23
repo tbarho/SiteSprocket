@@ -72,3 +72,10 @@
 	padding: 0 0 1px 22px;
 	font-size: 12px;
 }
+
+
+#Form_OptionPaymentForm_HeaderFieldBilling-information
+{
+	clear: both;
+	margin-bottom: 0;
+}
