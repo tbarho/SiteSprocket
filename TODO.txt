@@ -1,0 +1,11 @@
+
+fix S3 file names
+subscriptions
+	how do they fit in, how should they work?
+project management
+	revisit interface design to attempt something more organized
+email notifications
+	client alerts / links
+	admin alerts / links
+	email config
+	template polishing
