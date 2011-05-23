@@ -344,7 +344,7 @@ input#MemberLoginForm_LoginForm_action_logout {
 #ExpMonth, #ExpYear, #CCV {
 	float: left;
 	clear: none;
-	overflow: auto;
+	overflow: none;
 }
 
 #CCV {
