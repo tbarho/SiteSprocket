@@ -284,9 +284,10 @@ class SiteSprocket_Controller extends Page_Controller implements PermissionProvi
 	public function upload() {
 		if(isset($_FILES["Filedata"]) && is_uploaded_file($_FILES["Filedata"]["tmp_name"])) {
 			$ext = strtolower(end(explode('.', $_FILES['Filedata']['name'])));
+			$ssp_filename = strtolower(substr($_FILES['Filedata']['name'], 0, strpos($_FILES['Filedata']['name'], '.'))) . '_';
 			$file = new SiteSprocketFile();
 			$file->setUploadBucket(SiteSprocketConfig::S3_UPLOAD_BUCKET);
-			$file->fileName = uniqid('ssp_');
+			$file->fileName = uniqid($ssp_filename);
 			$file->loadUploaded($_FILES['Filedata']);
 
 			$file->write();

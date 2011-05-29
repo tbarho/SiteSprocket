@@ -8,7 +8,7 @@ Director::addRules(10, array (
 
 Validator::set_javascript_validation_handler('none');
 
-Email::bcc_all_emails_to("t.barho@gmail.com");
+Email::bcc_all_emails_to("ty@sitesprocket.com");
 //Email::bcc_all_emails_to("aaroncarlino@gmail.com");
 
 UploadifyField::set_var('file_class','SiteSprocketFile');
